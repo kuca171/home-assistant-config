@@ -29,3 +29,5 @@ include:
     - light.kuchyne_linka_vlevo
     - light.kuchyne_linka_vpravo
     - light.kuchyne_pc
+    - sensor.memory_free
+    - climate.rpi_cooling_fan_controller

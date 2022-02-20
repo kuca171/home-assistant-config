@@ -103,53 +103,41 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
   <thead>
     <tr>
       <th>Název doplňku</th>
-      <th>Použitá verze</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><a href="https://github.com/esphome/esphome">ESPhome</a></td>
-      <td>2022.2.3</td>
     </tr>
     <tr>
       <td><a href="https://github.com/home-assistant/addons/tree/master/configurator">File editor</a></td>
-      <td>5.3.3</td>
     </tr>
     <tr>
       <td><a href="https://github.com/sabeechen/hassio-google-drive-backup">Home Assistant Google Drive Backup</a></td>
-      <td>0.105.1</td>
     </tr>
     <tr>
       <td><a href="https://github.com/hassio-addons/addon-grafana/">Grafana</a></td>
-      <td>7.4.1</td>
     </tr>
     <tr>
       <td><a href="https://github.com/hassio-addons/addon-influxdb/">InfluxDB</a></td>
-      <td>4.3.0</td>
     </tr>
     <tr>
       <td><a href="https://github.com/home-assistant/addons/tree/master/mariadb">MariaDB</a></td>
-      <td>2.4.0</td>
     </tr>
     <tr>
       <td><a href="https://github.com/home-assistant/addons/tree/master/mosquitto">Mosquitto broker</a></td>
-      <td>6.0.1</td>
     </tr>
     <tr>
       <td><a href="https://github.com/hassio-addons/addon-node-red">Node-RED</a></td>
-      <td>11.0.3</td>
     </tr>
     <tr>
       <td><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></td>
-      <td>0.7.0</td>
     </tr>
     <tr>
-      <td><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></td>
-      <td>10.0.2</td>
+      <td><s><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></s></td>
     </tr>
     <tr>
       <td><s><a href="https://github.com/hassio-addons/addon-vscode/">Studio Code Server</a></s></td>
-      <td><s>4.1.0</s></td>
     </tr>
   </tbody>
 </table>
