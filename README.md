@@ -1,7 +1,7 @@
 # Kuca home-assistant-config
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2022.2.8%20-green)](https://github.com/home-assistant/core/releases/tag/2022.2.8)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2022.2.9%20-green)](https://github.com/home-assistant/core/releases/tag/2022.2.9)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-orange)](https://community.home-assistant.io/u/kuca171/summary)
 
 Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
@@ -9,7 +9,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 ### Do budoucna plánuji
 
 - [x] Přechod z [auto backup](https://github.com/jcwillox/hass-auto-backup) na Home Assistant Google Drive Backup
-- [ ] Přidání dalších žárovek
+- [x] Přidání dalších žárovek
 - [ ] Migrace z SD na SSD disk
 - [ ] Přidání zásuvek
 - [ ] Automatické hydroponické pěstování koriandru (rozpracováno -> Mega R3 wifi + 5v čerpadla, 12V spínané větráky, 5V LED osvětlení, LM393, BME280, DHT22)  
@@ -57,7 +57,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
   <tbody>
     <tr>
       <td>Solight LED SMART WIFI RGB žárovka (wz432)</td>
-      <td>1</td>
+      <td>3</td>
       <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
     </tr>
   </tbody>
@@ -154,29 +154,23 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
   <thead>
     <tr>
       <th>Název</th>
-      <th>Použitá verze</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><s><a href="https://github.com/jcwillox/hass-auto-backup">Auto backup</a></s></td>
-      <td><s>0.10.1</s></td>
     </tr>
     <tr>
       <td><a href="https://github.com/bruxy70/Garbage-Collection/">Garbage Collection</a></td>
-      <td>4.4.5</td>
     </tr>
     <tr>
       <td><a href="https://github.com/basnijholt/lovelace-ios-themes">iOS Themes</a></td>
-      <td>2.5.0</td>
     </tr>
     <tr>
       <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
-      <td>3.4.0</td>
     </tr>
     <tr>
       <td><a href="https://github.com/thecode/ha-rpi_gpio">Raspberry Pi GPIO custom integration</a></td>
-      <td>2022.2.3</td>
     </tr>
   </tbody>
 </table>
