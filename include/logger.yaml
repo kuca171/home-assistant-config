@@ -1,0 +1,3 @@
+default: warn
+logs:
+  custom_components.localtuya.common: fatal 

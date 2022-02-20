@@ -1,0 +1,31 @@
+purge_keep_days: 7
+commit_interval: 120
+db_url: !secret recorder_db_url
+exclude:
+  event_types:
+    - call_service
+  domains:
+    - automation
+    - binary_sensor
+    - calendar
+    - camera
+    - climate
+    - device_tracker
+    - input_boolean
+    - input_select
+    - light
+    - persistent_notification
+    - person
+    - sensor
+    - sun
+    - switch
+    - weather
+    - zone
+include:
+  entities:
+    - sensor.loznice_teplota
+    - sensor.loznice_tlak
+    - sensor.loznice_vlhkost
+    - light.kuchyne_linka_vlevo
+    - light.kuchyne_linka_vpravo
+    - light.kuchyne_pc

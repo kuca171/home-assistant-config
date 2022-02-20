@@ -1,0 +1,36 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+  
+# frontend
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Managed via UI
+group: !include groups.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+    
+# Automation
+automation: !include automations.yaml
+    
+# Inputs
+input_boolean: !include include/input_booleans.yaml
+input_select:  !include include/input_selects.yaml
+
+# Logging, history and backup
+logger: !include include/logger.yaml
+recorder: !include include/recorder.yaml
+system_log: !include include/system_logs.yaml
+#auto_backup: !include include/auto_backup.yaml
+
+# InfluxDb
+influxdb: !include include/influxdb.yaml
+
+#other
+sensor: !include include/sensors.yaml
+switch: !include include/switches.yaml
+climate: !include include/climate.yaml

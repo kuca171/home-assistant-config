@@ -1,0 +1,11 @@
+host: a0d7b954-influxdb
+database: !secret influx_dbname
+username: !secret influx_username
+password: !secret influx_password
+include:
+  entities:
+    - light.c37_smart_mini_rgbcct_bulb
+    - light.kuchyne_chytra_zarovka
+    - sensor.bme_humidity
+    - sensor.bme_pressure
+    - sensor.bme_temperature

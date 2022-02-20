@@ -1,0 +1,29 @@
+# Gitignore settings for ESPHome
+
+/.esphome/
+/secrets.yaml
+
+# home assistant
+
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+home-assistant_v2.db
+tts/
+node-red/
+blueprints/
+deps/
+home-assistant.log
+home-assistant.log.fault
+home-assistant.log.1

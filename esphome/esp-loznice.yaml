@@ -1,0 +1,49 @@
+esphome:
+  name: esp-loznice
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "b57bfb0ed14ff8ca65a0068f545c8a40"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp-Loznice Fallback Hotspot"
+    password: !secret wifi_ap_password
+
+captive_portal:
+
+i2c:
+  sda: 21
+  scl: 22
+  scan: True
+sensor:
+  - platform: wifi_signal
+    name: "Ložnice ESP Wifi signál"
+    update_interval: 180s
+  - platform: bme280
+    temperature:
+      name: "Ložnice teplota"
+      oversampling: 16x
+      id: bme_temp
+    pressure:
+      name: "Ložnice tlak"
+      id: bme_press
+    humidity:
+      name: "Ložnice vlhkost"
+      id: bme_humid
+    address: 0x76
+    update_interval: 180s
