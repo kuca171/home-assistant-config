@@ -194,7 +194,7 @@ Pro nastavení témat z HACS. Nastavuje [ios-themes](https://github.com/basnijho
 
 ### Frontend: tmavý mód
 
-Přepne se téma Home Assistant na tmavý mód ve 20h.
+Přepne se téma Home Assistant na tmavý mód při západu slunce a ve 20h.
 
 *používá:*
    - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)
@@ -202,7 +202,7 @@ Přepne se téma Home Assistant na tmavý mód ve 20h.
    
 ### Frontend: světlý mód
 
-Přepne se téma Home Assistant na světlý mód v 6h.
+Přepne se téma Home Assistant na světlý mód při východu slunce a v 6h.
 
 *používá:*
    - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)
