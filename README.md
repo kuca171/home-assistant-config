@@ -42,7 +42,12 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
       <td></td>
     </tr>
     <tr>
-      <td>Samsung EVO Plus microSDXC 64GB MB-MC64HA/EU</td>
+      <td><s>Samsung EVO Plus microSDXC 64GB MB-MC64HA/EU</s></td>
+      <td><s>1</s></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Verbatim Vx500 SSD 120GB</td>
       <td>1</td>
       <td></td>
     </tr>
