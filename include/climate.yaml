@@ -1,3 +1,4 @@
+#chlazeni procesoru
 - platform: generic_thermostat
   name: RPI Cooling Fan Controller
   heater: switch.rpi_cooling_fan

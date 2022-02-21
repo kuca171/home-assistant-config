@@ -1,4 +1,4 @@
-# monitor system information
+# systemove informace
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
@@ -15,7 +15,7 @@
     - type: swap_use
     - type: swap_use_percent
 
-# monitor CPU temperature for fan
+#  teplota procesoru
 - platform: command_line
   name: CPU Temperature
   command: "cat /sys/class/thermal/thermal_zone0/temp"
