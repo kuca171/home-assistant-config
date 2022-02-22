@@ -12,7 +12,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 - [x] Přidání dalších žárovek
 - [x] Migrace z SD na SSD disk
 - [ ] Přidání zásuvek
-- [ ] Automatické hydroponické pěstování koriandru (rozpracováno -> Mega R3 wifi + 5v čerpadla, 12V spínané větráky, 5V LED osvětlení, LM393, BME280, DHT22)  
+- [ ] Automatické hydroponické pěstování koriandru (rozpracováno -> Mega R3 wifi + 5v čerpadla, 5V větráky, 5V LED osvětlení, LM393, DHT11)  
 - [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) 
 - [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280)
 
