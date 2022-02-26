@@ -11,4 +11,9 @@ include:
     - light.kuchyne_linka_vpravo
     - light.kuchyne_pc
     - sensor.memory_free
+    - sensor.backup_state
+    - binary_sensor.backups_stale
     - climate.rpi_cooling_fan_controller
+    - sensor.disk_free
+    - sensor.disk_use_config
+    - sensor.mariadb_velikost
