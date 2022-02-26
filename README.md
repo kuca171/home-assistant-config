@@ -2,7 +2,7 @@
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
 [![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2022.2.9%20-green)](https://github.com/home-assistant/core/releases/tag/2022.2.9)
-[![HA Community](https://img.shields.io/badge/HA%20community-forum-orange)](https://community.home-assistant.io/u/kuca171/summary)
+[![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 
