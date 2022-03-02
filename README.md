@@ -210,13 +210,13 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 ~~Přepne se téma Home Assistant na světlý mód při východu slunce a v 6h.~~
 
 ~~*používá:*~~
-~~   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+~~- [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
 
 ### ~~Frontend: změna tématu~~
 
 ~~Nastaví téma Home-Assistant.~~
 
 ~~*používá:*~~
-~~   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
-~~   - [input_boolean.theme_alternative](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
-~~   - [input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/input_selects.yaml)~~
+~~- [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+~~- [input_boolean.theme_alternative](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+~~- [input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/input_selects.yaml)~~
