@@ -169,7 +169,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
       <td><a href="https://github.com/bruxy70/Garbage-Collection/">Garbage Collection</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/basnijholt/lovelace-ios-themes">iOS Themes</a></td>
+      <td><s><a href="https://github.com/basnijholt/lovelace-ios-themes">iOS Themes</a></s></td>
     </tr>
     <tr>
       <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
@@ -185,7 +185,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 # Automatizace
 
 - ~~[Automatická záloha](#automatická-záloha) (1 automatizace)~~ 
-- [Fronted - vzhled](#fronted---vzhled) (3 automatizace)
+- ~~[Fronted - vzhled](#fronted---vzhled) (3 automatizace)~~
 
 ## ~~Automatická záloha~~
 
@@ -193,30 +193,30 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 ~~Automatická záloha probíhá každou středu ve 2:00.~~
 
-## Fronted - vzhled 
+## ~~Fronted - vzhled~~ 
 
-Pro nastavení témat z HACS. Nastavuje [ios-themes](https://github.com/basnijholt/lovelace-ios-themes).
+~~Pro nastavení témat z HACS. Nastavuje [ios-themes](https://github.com/basnijholt/lovelace-ios-themes).~~
 
-### Frontend: tmavý mód
+### ~~Frontend: tmavý mód~~
 
-Přepne se téma Home Assistant na tmavý mód při západu slunce a ve 20h.
+~~Přepne se téma Home Assistant na tmavý mód při západu slunce a ve 20h.~~
 
-*používá:*
-   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)
+~~*používá:*~~
+~~   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
 
    
-### Frontend: světlý mód
+### ~~Frontend: světlý mód~~
 
-Přepne se téma Home Assistant na světlý mód při východu slunce a v 6h.
+~~Přepne se téma Home Assistant na světlý mód při východu slunce a v 6h.~~
 
-*používá:*
-   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)
+~~*používá:*~~
+~~   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
 
-### Frontend: změna tématu
+### ~~Frontend: změna tématu~~
 
-Nastaví téma Home-Assistant.
+~~Nastaví téma Home-Assistant.~~
 
-*používá:*
-   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)
-   - [input_boolean.theme_alternative](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)
-   - [input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/input_selects.yaml)
+~~*používá:*~~
+~~   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+~~   - [input_boolean.theme_alternative](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+~~   - [input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/input_selects.yaml)~~
