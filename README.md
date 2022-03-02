@@ -202,7 +202,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 ~~Přepne se téma Home Assistant na tmavý mód při západu slunce a ve 20h.~~
 
 ~~*používá:*~~
-~~   - [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+~~- [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
 
    
 ### ~~Frontend: světlý mód~~
