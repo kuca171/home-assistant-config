@@ -21,7 +21,7 @@ logger:
 api:
 
 ota:
-  password: OTA_Password
+  password: !secret ota_password
 
 esp32_camera:
   external_clock:
@@ -37,7 +37,7 @@ esp32_camera:
   power_down_pin: GPIO32
   # Image settings
   name: "kamera_zahrada"
-  max_framerate: 15 fps
+  max_framerate: 10 fps
   
 switch:
   - platform: restart

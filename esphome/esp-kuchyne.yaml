@@ -13,7 +13,7 @@ logger:
 api:
 
 ota:
-  password: "396ca93fd6c82a85e004b27b32ab4d0f"
+  password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
@@ -22,6 +22,6 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Esp-Kuchyne Fallback Hotspot"
-    password: "27wQGtaYZkmm"
+    password: !secret wifi_ap_password
 
 captive_portal:

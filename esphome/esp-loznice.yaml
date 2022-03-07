@@ -13,7 +13,7 @@ logger:
 api:
 
 ota:
-  password: "b57bfb0ed14ff8ca65a0068f545c8a40"
+  password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
