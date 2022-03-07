@@ -11,9 +11,9 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 - [x] Přechod z [auto backup](https://github.com/jcwillox/hass-auto-backup) na Home Assistant Google Drive Backup
 - [x] Přidání dalších žárovek
 - [x] Migrace z SD na SSD disk
-- [ ] Přidání zásuvek
-- [ ] Automatické hydroponické pěstování koriandru (rozpracováno -> Mega R3 wifi + 5v čerpadla, 5V větráky, 5V LED osvětlení, LM393, DHT11)  
+- [ ] Automatické hydroponické pěstování koriandru (rozpracováno)  
 - [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) 
+- [ ] Přidání zásuvek
 - [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280)
 
 # Obsah
