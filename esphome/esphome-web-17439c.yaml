@@ -38,6 +38,8 @@ esp32_camera:
   # Image settings
   name: "kamera_zahrada"
   max_framerate: 10 fps
+  resolution: 640x480
+  jpeg_quality: 10
   
 switch:
   - platform: restart
