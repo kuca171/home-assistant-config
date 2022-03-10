@@ -35,3 +35,6 @@ include:
     - sensor.disk_free
     - sensor.disk_use_config
     - sensor.mariadb_velikost
+    - light.c37_smart_mini_rgbcct_bulb
+    - light.c37_smart_mini_rgbcct_bulb_2
+    - light.c37_smart_mini_rgbcct_bulb_3

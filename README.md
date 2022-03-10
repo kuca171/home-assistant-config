@@ -11,7 +11,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 - [x] Přechod z [auto backup](https://github.com/jcwillox/hass-auto-backup) na Home Assistant Google Drive Backup
 - [x] Přidání dalších žárovek
 - [x] Migrace z SD na SSD disk
-- [ ] Automatické hydroponické pěstování koriandru (rozpracováno)  
+- [ ] Automatické hydroponické pěstování koriandru (rozpracováno - připravuji repozitář s projektem)  
 - [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) 
 - [ ] Přidání zásuvek
 - [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280)
@@ -136,10 +136,10 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
       <td><a href="https://github.com/hassio-addons/addon-node-red">Node-RED</a></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></td>
+      <td><s><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></s></td>
     </tr>
     <tr>
-      <td><s><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></s></td>
+      <td><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></td>
     </tr>
     <tr>
       <td><s><a href="https://github.com/hassio-addons/addon-vscode/">Studio Code Server</a></s></td>
