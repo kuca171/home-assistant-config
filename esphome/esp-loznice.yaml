@@ -11,13 +11,14 @@ logger:
 
 # Enable Home Assistant API
 api:
-
+  password: !secret api_password
 ota:
   password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
+  use_address: "10.0.0.111"
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
@@ -33,7 +34,7 @@ i2c:
 sensor:
   - platform: wifi_signal
     name: "Ložnice ESP Wifi signál"
-    update_interval: 180s
+    update_interval: 300s
   - platform: bme280
     temperature:
       name: "Ložnice teplota"
@@ -46,4 +47,4 @@ sensor:
       name: "Ložnice vlhkost"
       id: bme_humid
     address: 0x76
-    update_interval: 180s
+    update_interval: 300s

@@ -1,3 +1,5 @@
 default: warn
 logs:
   custom_components.localtuya.common: fatal 
+  #aioesphomeapi.reconnect_logic: debug
+  #homeassistant.components.esphome: debug
