@@ -193,7 +193,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 ~~Automatická záloha probíhá každou středu ve 2:00.~~
 
-## ~~Fronted - vzhled~~ 
+## Fronted - vzhled 
 
 Pro nastavení témat z HACS. 
 
