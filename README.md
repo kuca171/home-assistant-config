@@ -185,7 +185,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 # Automatizace
 
 - ~~[Automatická záloha](#automatická-záloha) (1 automatizace)~~ 
-- ~~[Fronted - vzhled](#fronted---vzhled) (3 automatizace)~~
+- [Fronted - vzhled](#fronted---vzhled) (3 automatizace)
 
 ## ~~Automatická záloha~~
 
@@ -195,7 +195,14 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 ## ~~Fronted - vzhled~~ 
 
-~~Pro nastavení témat z HACS. Nastavuje [ios-themes](https://github.com/basnijholt/lovelace-ios-themes).~~
+Pro nastavení témat z HACS. 
+
+### Frontend: změna tématu 2
+
+Nastaví téma Home-Assistant.
+
+*používá:*
+- [input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/inputs/input_selects.yaml)
 
 ### ~~Frontend: tmavý mód~~
 

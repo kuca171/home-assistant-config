@@ -1,3 +1,15 @@
+- id: "change_thema"
+  alias: "Frontend: změna tématu"
+  trigger:
+    - platform: state
+      entity_id: input_select.theme
+    - platform: homeassistant
+      event: start
+  action:
+    service: frontend.set_theme
+    data:
+       name: "{{ states.input_select.theme.state }}"
+
 #- alias: "Auto záloha"
 #  description: 'Automatická týdenní plná záloha Hassio každou středu'
 #  trigger:

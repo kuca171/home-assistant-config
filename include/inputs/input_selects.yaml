@@ -1,0 +1,6 @@
+# pro automatizaci temat
+theme:
+  options:
+    - default
+    - oxfordblue
+  icon: mdi:format-color-fill
