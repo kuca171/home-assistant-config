@@ -185,7 +185,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 # Automatizace
 
 - ~~[Automatická záloha](#automatická-záloha) (1 automatizace)~~ 
-- [Fronted - vzhled](#fronted---vzhled) (3 automatizace)
+- [Fronted - vzhled](#fronted---vzhled) (~~3 automatizace~~ 1 automatizace)
 
 ## ~~Automatická záloha~~
 
