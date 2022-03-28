@@ -1,6 +1,9 @@
 # pro automatizaci temat
 theme:
   options:
+    - clear
     - default
+    - foxhome
     - oxfordblue
+    - Vastayan Bond
   icon: mdi:format-color-fill

@@ -28,7 +28,7 @@ include:
     - sensor.loznice_tlak
     - sensor.loznice_vlhkost
     - light.kuchyne_linka_vlevo
-    - light.kuchyne_linka_vpravo
+    - light.kuchyne_linka
     - light.kuchyne_pc
     - sensor.memory_free
     - climate.rpi_cooling_fan_controller
