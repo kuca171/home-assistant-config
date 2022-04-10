@@ -17,3 +17,6 @@ include:
     - sensor.disk_free
     - sensor.disk_use_config
     - sensor.mariadb_velikost
+    - sensor.general_waste
+    - sensor.paper
+    - sensor.plastic

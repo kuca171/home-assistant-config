@@ -38,3 +38,6 @@ include:
     - light.c37_smart_mini_rgbcct_bulb
     - light.c37_smart_mini_rgbcct_bulb_2
     - light.c37_smart_mini_rgbcct_bulb_3
+    - sensor.general_waste
+    - sensor.paper
+    - sensor.plastic
