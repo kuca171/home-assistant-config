@@ -1,5 +1,5 @@
 esphome:
-  name: esp-kuchyne
+  name: esp-kuchyn
 
 esp32:
   board: esp32dev
@@ -11,7 +11,8 @@ logger:
 
 # Enable Home Assistant API
 api:
-
+  password: !secret api_password
+  
 ota:
   password: !secret ota_password
 
@@ -21,7 +22,29 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Esp-Kuchyne Fallback Hotspot"
+    ssid: "Esp-Kuchyn Fallback Hotspot"
     password: !secret wifi_ap_password
 
 captive_portal:
+
+i2c:
+  sda: 21
+  scl: 22
+  scan: True
+sensor:
+  - platform: wifi_signal
+    name: "Kuchyň ESP Wifi signál"
+    update_interval: 180s
+  - platform: bme280
+    temperature:
+      name: "Kuchyň teplota"
+      oversampling: 16x
+      id: bme_temp_kitchen
+    pressure:
+      name: "Kuchyň tlak"
+      id: bme_press_kitchen
+    humidity:
+      name: "Kuchyň vlhkost"
+      id: bme_humid_kitchen
+    address: 0x76
+    update_interval: 180s
