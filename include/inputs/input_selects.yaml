@@ -4,6 +4,8 @@ theme:
     - clear
     - default
     - foxhome
+    - Google Theme
+    - Light Soft UI
     - oxfordblue
     - Vastayan Bond
   icon: mdi:format-color-fill
