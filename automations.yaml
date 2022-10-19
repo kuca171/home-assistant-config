@@ -1,67 +1,62 @@
-- id: "change_thema"
-  alias: "Frontend: změna tématu"
+- id: change_thema
+  alias: 'Frontend: změna tématu'
   trigger:
-    - platform: state
-      entity_id: input_select.theme
-    - platform: homeassistant
-      event: start
+  - platform: state
+    entity_id: input_select.theme
+  - platform: homeassistant
+    event: start
   action:
     service: frontend.set_theme
     data:
-       name: "{{ states.input_select.theme.state }}"
-
-#- alias: "Auto záloha"
-#  description: 'Automatická týdenní plná záloha Hassio každou středu'
-#  trigger:
-#  - platform: time
-#    at: '02:00:00'
-#  condition:
-#  - condition: time
-#    weekday:
-#      - wed
-#  action:
-#  - service: hassio.backup_full
-#    data_template:
-#      name: 'Hassio ({{now().strftime(''%d.%m.%y'')}})'
-#  mode: single
-
-#- alias: "Frontend: tmavý mód"
-#  trigger:
-#    - platform: time
-#      at: "20:00"
-#    - platform: sun
-#      event: sunset
-#  condition: "{{ is_state('input_boolean.dark_mode', 'off') }}"
-#  action:
-#    entity_id: input_boolean.dark_mode
-#    service: input_boolean.turn_on
-
-#- alias: "Frontend: světlý mód"
-#  trigger:
-#    - platform: time
-#      at: "06:00"
-#    - platform: sun
-#      event: sunrise
-#  condition: "{{ is_state('input_boolean.dark_mode', 'on') }}"
-#  action:
-#    entity_id: input_boolean.dark_mode
-#    service: input_boolean.turn_off
-
-#- alias: "Frontend: změna tématu"
-#  trigger:
-#    - platform: state
-#      entity_id: input_select.theme
-#    - platform: state
-#      entity_id: input_boolean.dark_mode
-#    - platform: state
-#      entity_id: input_boolean.theme_alternative
-#    - platform: homeassistant
-#      event: start
-#  action:
-#    service: frontend.set_theme
-#    data:
-#       name: >
-#            {% set name = states("input_select.theme") -%}
-#            {% set mode = "dark" if is_state("input_boolean.dark_mode", "on") else "light" %}
-#            {% set suffix = "-alternative" if is_state("input_boolean.theme_alternative", "on") else "" -%}
-#            ios-{{ mode }}-mode-{{ name }}{{ suffix }}
+      name: '{{ states.input_select.theme.state }}'
+- id: '1666183776295'
+  alias: Notifikace odpadky - směs
+  description: Notifikace na vyvyzení popelnice
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: state
+    entity_id: sensor.general_waste
+    attribute: days
+    state: '0'
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      title: Odpadky
+      message: Směs
+  mode: single
+- id: '1666183903283'
+  alias: Notifikace odpadky - papír
+  description: Notifikace na vyvezení popelnice
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: state
+    entity_id: sensor.paper
+    attribute: days
+    state: '0'
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      title: Odpadky
+      message: Papír
+  mode: single
+- id: '1666184054627'
+  alias: Notifikace odpadky - plasty
+  description: Notifikace na vyvezení popelnice
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: state
+    entity_id: sensor.plastic
+    attribute: days
+    state: '0'
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      message: Plasty
+      title: Odpadky
+  mode: single
