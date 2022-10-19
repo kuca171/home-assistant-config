@@ -139,7 +139,7 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
       <td><s><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></s></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></td>
+      <td><s><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></s></td>
     </tr>
     <tr>
       <td><s><a href="https://github.com/hassio-addons/addon-vscode/">Studio Code Server</a></s></td>
