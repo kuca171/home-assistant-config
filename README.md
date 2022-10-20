@@ -184,46 +184,97 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 # Automatizace
 
-- ~~[Automatická záloha](#automatická-záloha) (1 automatizace)~~ 
-- [Fronted - vzhled](#fronted---vzhled) (~~3 automatizace~~ 1 automatizace)
+- [Frontend: změna tématu](#frontend-změna-tématu) 
+- [Notifikace odpadky - směs](#notifikace-odpadky---směs) 
+- [Notifikace odpadky - papír](#notifikace-odpadky---papír)
+- [Notifikace odpadky - plasty](#notifikace-odpadky---plasty)
 
-## ~~Automatická záloha~~
-
-~~Použité rozšíření z HACS - [Auto backup](https://github.com/jcwillox/hass-auto-backup).~~
-
-~~Automatická záloha probíhá každou středu ve 2:00.~~
-
-## Fronted - vzhled 
-
-Pro nastavení témat z HACS. 
-
-### Frontend: změna tématu 2
+## Frontend: změna tématu 
 
 Nastaví téma Home-Assistant.
 
-*používá:*
-- [input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/inputs/input_selects.yaml)
+```yaml
+- id: change_thema
+  alias: 'Frontend: změna tématu'
+  trigger:
+  - platform: state
+    entity_id: input_select.theme
+  - platform: homeassistant
+    event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: '{{ states.input_select.theme.state }}'
+```
 
-### ~~Frontend: tmavý mód~~
+## Notifikace odpadky - směs
 
-~~Přepne se téma Home Assistant na tmavý mód při západu slunce a ve 20h.~~
+Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
 
-~~*používá:*~~
-~~- [input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+```yaml
+- id: '1666183776295'
+  alias: Notifikace odpadky - směs
+  description: Notifikace na vyvyzení popelnice
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: state
+    entity_id: sensor.general_waste
+    attribute: days
+    state: '0'
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      title: Odpadky
+      message: Směs
+  mode: single
+```
 
-   
-### ~~Frontend: světlý mód~~
+## Notifikace odpadky - papír
 
-~~Přepne se téma Home Assistant na světlý mód při východu slunce a v 6h.~~
+Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
 
-~~*používá:*~~
-- ~~[input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
+```yaml
+- id: '1666183903283'
+  alias: Notifikace odpadky - papír
+  description: Notifikace na vyvezení popelnice
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: state
+    entity_id: sensor.paper
+    attribute: days
+    state: '0'
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      title: Odpadky
+      message: Papír
+  mode: single
+```
 
-### ~~Frontend: změna tématu~~
+## Notifikace odpadky - plasty
 
-~~Nastaví téma Home-Assistant.~~
+Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
 
-~~*používá:*~~
-- ~~[input_boolean.dark_mode](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
-- ~~[input_boolean.theme_alternative](https://github.com/kuca171/home-assistant-config/blob/master/include/input_booleans.yaml)~~
-- ~~[input_select.theme](https://github.com/kuca171/home-assistant-config/blob/master/include/input_selects.yaml)~~
+```yaml
+- id: '1666184054627'
+  alias: Notifikace odpadky - plasty
+  description: Notifikace na vyvezení popelnice
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition:
+  - condition: state
+    entity_id: sensor.plastic
+    attribute: days
+    state: '0'
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      message: Plasty
+      title: Odpadky
+  mode: single
+```
