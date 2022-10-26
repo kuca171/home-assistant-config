@@ -224,7 +224,7 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
   - condition: state
     entity_id: sensor.general_waste
     attribute: days
-    state: '0'
+    state: 0
   action:
   - service: notify.mobile_app_redmi_note_8_pro
     data:
@@ -248,7 +248,7 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
   - condition: state
     entity_id: sensor.paper
     attribute: days
-    state: '0'
+    state: 0
   action:
   - service: notify.mobile_app_redmi_note_8_pro
     data:
@@ -272,7 +272,7 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
   - condition: state
     entity_id: sensor.plastic
     attribute: days
-    state: '0'
+    state: 0
   action:
   - service: notify.mobile_app_redmi_note_8_pro
     data:
