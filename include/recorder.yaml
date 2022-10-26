@@ -42,3 +42,4 @@ include:
     - sensor.paper
     - sensor.plastic
     - sensor.processor_use
+    - sensor.cpu_temperature

@@ -20,3 +20,4 @@ include:
     - sensor.general_waste
     - sensor.paper
     - sensor.plastic
+    - sensor.cpu_temperature
