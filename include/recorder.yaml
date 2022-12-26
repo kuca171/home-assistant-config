@@ -43,3 +43,4 @@ include:
     - sensor.plastic
     - sensor.processor_use
     - sensor.cpu_temperature
+    - sensor.farma_svetlo

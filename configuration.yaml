@@ -34,3 +34,5 @@ influxdb: !include include/influxdb.yaml
 sensor: !include_dir_merge_list include/sensors/ 
 switch: !include include/switches.yaml
 climate: !include include/climate.yaml
+mqtt: !include include/mqtt.yaml
+  

@@ -1,5 +1,6 @@
 default: warn
 logs:
-  custom_components.localtuya.common: fatal 
+  custom_components.localtuya: fatal 
   #aioesphomeapi.reconnect_logic: debug
   #homeassistant.components.esphome: debug
+  homeassistant.components.mqtt: warning

@@ -1,0 +1,47 @@
+sensor:
+    - name: "Farma_svetlo"
+      unique_id: "Farm_ligth" 
+      state_topic: "farma/sensors"
+      value_template: "{{ value_json.ligth }}"
+      availability:
+        - topic: "farma/availability"
+      payload_available: "online"
+      payload_not_available: "offline"
+      qos: 1
+      
+    - name: "Teplota-test"
+      unique_id: "xx152" 
+      state_topic: "bridge/slave/sensors"
+      value_template: "{{ value_json.temperature }}"
+      availability:
+        - topic: "bridge/availability"
+      payload_available: "online"
+      payload_not_available: "offline"      
+      
+switch:
+    - unique_id: "Farm_led"
+      name: "Farma LED"
+      state_topic: "farma/device/state"
+      value_template: "{{ value_json.led }}"
+      command_topic: "farma/device/cmd"
+      availability:
+        - topic: "farma/availability"
+      payload_on: "LED_ON"
+      payload_off: "LED_OFF"
+      state_on: "ON"
+      state_off: "OFF"
+      optimistic: false
+      qos: 1
+    
+    - unique_id: "Linka_led_pasek"
+      name: "LED linka"
+      state_topic: "led-linka/state"
+      command_topic: "led-linka/cmd"
+      availability:
+        - topic: "led-linka/availability"
+      payload_on: "1"
+      payload_off: "0"
+      state_on: "1"
+      state_off: "0"
+      optimistic: false
+      qos: 1
