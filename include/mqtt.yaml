@@ -9,10 +9,43 @@ sensor:
       payload_not_available: "offline"
       qos: 1
       
+    - name: "Farma_teplota"
+      unique_id: "Farm_temperature" 
+      state_topic: "farma/sensors"
+      value_template: "{{ value_json.temperature }}"
+      unit_of_measurement: "°C"
+      availability:
+        - topic: "farma/availability"
+      payload_available: "online"
+      payload_not_available: "offline"
+      qos: 1
+      
+    - name: "Farma_vlhkost"
+      unique_id: "Farm_humidity" 
+      state_topic: "farma/sensors"
+      value_template: "{{ value_json.humidity }}"
+      unit_of_measurement: "%"
+      availability:
+        - topic: "farma/availability"
+      payload_available: "online"
+      payload_not_available: "offline"
+      qos: 1
+      
+    - name: "Farma_vlhkost_pudy"
+      unique_id: "Farm_soil_moisture" 
+      state_topic: "farma/sensors"
+      value_template: "{{ value_json.soil_moisture }}"
+      availability:
+        - topic: "farma/availability"
+      payload_available: "online"
+      payload_not_available: "offline"
+      qos: 1
+      
     - name: "Teplota-test"
       unique_id: "xx152" 
       state_topic: "bridge/slave/sensors"
       value_template: "{{ value_json.temperature }}"
+      unit_of_measurement: "°C"
       availability:
         - topic: "bridge/availability"
       payload_available: "online"
