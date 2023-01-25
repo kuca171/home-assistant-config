@@ -1,4 +1,5 @@
 sensor:
+# farma
     - name: "Farma_svetlo"
       unique_id: "Farm_ligth" 
       state_topic: "farma/sensors"
@@ -40,16 +41,71 @@ sensor:
       payload_available: "online"
       payload_not_available: "offline"
       qos: 1
-      
-    - name: "Teplota-test"
-      unique_id: "xx152" 
-      state_topic: "bridge/slave/sensors"
-      value_template: "{{ value_json.temperature }}"
+# Bridge      
+    - name: "Teplota-bridge"
+      unique_id: "FoxHomeIoT-bridge-temp" 
+      state_topic: "bridge/sensors"
+      value_template: "{{ value_json.temperature | round (1) }}"
       unit_of_measurement: "°C"
       availability:
         - topic: "bridge/availability"
+      device:
+        identifiers: "foxhomeiot-bridge"
+        name: "FoxHomeIoT-bridge"
+        model: "FoxHomeIoT-ESP32-bridge"
+        manufacturer: "kuca"
+        sw_version: "1.2.0"
       payload_available: "online"
       payload_not_available: "offline"      
+      
+    - name: "Vlhkost-bridge"
+      unique_id: "FoxHomeIoT-bridge-hum" 
+      state_topic: "bridge/sensors"
+      value_template: "{{ value_json.humidity | round (1) }}"
+      unit_of_measurement: "%"
+      availability:
+        - topic: "bridge/availability"
+      device:
+        identifiers: "foxhomeiot-bridge"
+        name: "FoxHomeIoT-bridge"
+        model: "FoxHomeIoT-ESP32-bridge"
+        manufacturer: "kuca"
+        sw_version: "1.2.0"
+      payload_available: "online"
+      payload_not_available: "offline" 
+      
+    - name: "Tlak-bridge"
+      unique_id: "FoxHomeIoT-bridge-press" 
+      state_topic: "bridge/sensors"
+      value_template: "{{ value_json.pressure | round (0) }}"
+      unit_of_measurement: "hPa"
+      availability:
+        - topic: "bridge/availability"
+      device:
+        identifiers: "foxhomeiot-bridge"
+        name: "FoxHomeIoT-bridge"
+        model: "FoxHomeIoT-ESP32-bridge"
+        manufacturer: "kuca"
+        sw_version: "1.2.0"
+      payload_available: "online"
+      payload_not_available: "offline" 
+      
+    - name: "Wifi-signal-bridge"
+      unique_id: "FoxHomeIoT-bridge-wifi" 
+      state_topic: "bridge/sensors"
+      value_template: "{{ value_json.wifi_signal }}"
+      unit_of_measurement: "dBm"
+      availability:
+        - topic: "bridge/availability"
+      device:
+        identifiers: "foxhomeiot-bridge"
+        name: "FoxHomeIoT-bridge"
+        model: "FoxHomeIoT-ESP32-bridge"
+        manufacturer: "kuca"
+        sw_version: "1.2.0"
+      entity_category: diagnostic
+      payload_available: "online"
+      payload_not_available: "offline" 
       
 switch:
     - unique_id: "Farm_led"

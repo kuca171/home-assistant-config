@@ -44,3 +44,6 @@ include:
     - sensor.processor_use
     - sensor.cpu_temperature
     - sensor.farma_svetlo
+    - sensor.vlhkost_bridge
+    - sensor.teplota_bridge
+    - sensor.tlak_bridge

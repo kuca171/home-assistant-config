@@ -1,7 +1,7 @@
 # Kuca home-assistant-config
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.1.5%20-green)](https://github.com/home-assistant/core/releases/tag/2023.1.5)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.1.7%20-green)](https://github.com/home-assistant/core/releases/tag/2023.1.7)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 ![alt tag](mydashboard.bmp)
@@ -14,9 +14,9 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 - [x] Přidání dalších žárovek
 - [x] Migrace z SD na SSD disk
 - [ ] Automatické hydroponické pěstování koriandru (rozpracováno - připravuji repozitář s projektem)  
-- [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) 
+- [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) -> FoxHomeIoT
 - [ ] Přidání zásuvek
-- [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280)
+- [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280) -> FoxHomeIoT
 
 # Obsah
 
@@ -79,7 +79,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>ESP32 + BME280</td>
       <td>1</td>
-      <td><a href="https://github.com/esphome/esphome">ESPhome</a></td>
+      <td><a href="https://github.com/kuca171/FoxHomeIoT-ESP">FoxHomeIoT</a></td>
     </tr>
   </tbody>
   <thead>
@@ -93,7 +93,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>ESP32-cam</td>
       <td>1</td>
-      <td><a href="https://github.com/esphome/esphome">ESPhome</a></td>
+      <td>Postupná migrace -> FoxHomeIoT</td>
     </tr>
   </tbody>
 </table>
@@ -114,7 +114,7 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/esphome/esphome">ESPhome</a></td>
+      <td><s><a href="https://github.com/esphome/esphome">ESPhome</a></s></td>
     </tr>
     <tr>
       <td><a href="https://github.com/home-assistant/addons/tree/master/configurator">File editor</a></td>
@@ -141,7 +141,7 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
       <td><s><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></s></td>
     </tr>
     <tr>
-      <td><s><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></s></td>
+      <td><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></td>
     </tr>
     <tr>
       <td><s><a href="https://github.com/hassio-addons/addon-vscode/">Studio Code Server</a></s></td>
