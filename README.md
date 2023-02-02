@@ -111,9 +111,6 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     </tr>
   </tbody>
 </table>
-
-https://www.ledvance.com/consumer/products/smart-home/smart-components/smart-wifi/smart-indoor-components-with-wifi-technology/smart-plugs-with-wifi-technology/wifi-multi-power-socket-with-smart-3-eu-sockets-and-usb-ports-c173079
-
 <!-- end-table -->
 
 # Doplňky
