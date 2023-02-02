@@ -47,3 +47,12 @@ include:
     - sensor.vlhkost_bridge
     - sensor.teplota_bridge
     - sensor.tlak_bridge
+    - sensor.wifi_signal_bridge
+    - sensor.zasuvka_pc_napeti
+    - sensor.zasuvka_pc_prikon
+    - sensor.zasuvka_pc_proud
+    - switch.zasuvka_pc_1
+    - switch.zasuvka_pc_2
+    - switch.zasuvka_pc_3
+    - switch.zasuvka_pc_usb
+    

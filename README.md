@@ -1,7 +1,7 @@
 # Kuca home-assistant-config
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.1.7%20-green)](https://github.com/home-assistant/core/releases/tag/2023.1.7)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.2.0%20-green)](https://github.com/home-assistant/core/releases/tag/2023.2.0)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 ![alt tag](mydashboard.bmp)
@@ -70,6 +70,20 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
   </tbody>
   <thead>
     <tr>
+      <th>Zásuvky</th> 
+      <th>Počet kusů</th>
+      <th>Použitá integrace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Zásuvková lišta - LEDVANCE MULTI POWER SOCKET EU</td>
+      <td>1</td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
       <th>Senzory</th>
       <th>Počet kusů</th>
       <th>Použitá integrace</th>
@@ -97,6 +111,8 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     </tr>
   </tbody>
 </table>
+
+https://www.ledvance.com/consumer/products/smart-home/smart-components/smart-wifi/smart-indoor-components-with-wifi-technology/smart-plugs-with-wifi-technology/wifi-multi-power-socket-with-smart-3-eu-sockets-and-usb-ports-c173079
 
 <!-- end-table -->
 
