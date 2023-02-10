@@ -62,14 +62,14 @@
   mode: single
 - id: '1675859692648'
   alias: Sušička - notifikace
-  description: ''
+  description: Notifikace plné nádrže odvlhčovače
   trigger:
   - platform: state
     entity_id:
     - binary_sensor.susicka_nadrz
     attribute: raw_state
-    from: '0'
-    to: '8'
+    from: 0
+    to: 8
   condition: []
   action:
   - service: notify.mobile_app_redmi_note_8_pro

@@ -5,9 +5,8 @@ theme:
     - default
     - foxhome
     - Google Theme
-    - Metro
     - Mushroom
     - Mushroom Square
-    - Nord
     - oxfordblue
+    - waves
   icon: mdi:format-color-fill
