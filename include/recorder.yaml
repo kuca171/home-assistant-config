@@ -27,8 +27,8 @@ include:
     - sensor.loznice_teplota
     - sensor.loznice_tlak
     - sensor.loznice_vlhkost
-    - light.kuchyne_linka_vlevo
-    - light.kuchyne_linka
+    - light.kuchyne_vlevo
+    - light.kuchyne_vpravo
     - light.kuchyne_pc
     - sensor.memory_free
     - climate.rpi_cooling_fan_controller
@@ -48,11 +48,25 @@ include:
     - sensor.teplota_bridge
     - sensor.tlak_bridge
     - sensor.wifi_signal_bridge
-    - sensor.zasuvka_pc_napeti
-    - sensor.zasuvka_pc_prikon
-    - sensor.zasuvka_pc_proud
+    - sensor.zasuvky_pc_napeti
+    - sensor.zasuvky_pc_prikon
+    - sensor.zasuvky_pc_proud
     - switch.zasuvka_pc_1
     - switch.zasuvka_pc_2
     - switch.zasuvka_pc_3
     - switch.zasuvka_pc_usb
-    
+    - sensor.zasuvky_pc_spotreba
+    - binary_sensor.susicka_nadrz
+    - binary_sensor.susicka_rozmrazovani
+    - binary_sensor.susicka_unknown_101
+    - binary_sensor.susicka_unknown_7
+    - number.susicka_cilova_vlhkost
+    - select.susicka_rezim
+    - select.susicka_vetrak
+    - sensor.susicka_teplota
+    - sensor.susicka_vlhkost
+    - switch.susicka
+    - switch.susicka_nocni_rezim
+    - switch.susicka_uv
+    - device_tracker.jirka_kuca
+    - person.kuca

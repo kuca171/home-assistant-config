@@ -3,13 +3,3 @@
   ports:
     14: RPI Cooling Fan
     
-
-# Water switch
-#- platform: mqtt
-#  name: 'Vodní pumpa'
-#  state_topic: 'farm/led/state'
-#  command_topic: 'farm/led/switch'
-#  #value_template: '{{ value_json.state }}'
-#  qos: 0
-#  payload_on: '1'
-#  payload_off: '0' 

@@ -1,7 +1,7 @@
 # Kuca home-assistant-config
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.2.0%20-green)](https://github.com/home-assistant/core/releases/tag/2023.2.0)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.2.2%20-green)](https://github.com/home-assistant/core/releases/tag/2023.2.2)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 ![alt tag](mydashboard.bmp)
@@ -10,12 +10,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 
 ### Do budoucna plánuji
 
-- [x] Přechod z [auto backup](https://github.com/jcwillox/hass-auto-backup) na Home Assistant Google Drive Backup
-- [x] Přidání dalších žárovek
-- [x] Migrace z SD na SSD disk
-- [ ] Automatické hydroponické pěstování koriandru (rozpracováno - připravuji repozitář s projektem)  
 - [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) -> FoxHomeIoT
-- [ ] Přidání zásuvek
 - [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280) -> FoxHomeIoT
 
 # Obsah
@@ -65,7 +60,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Solight LED SMART WIFI RGB žárovka (wz432)</td>
       <td>3</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">localtuya</a></td>
     </tr>
   </tbody>
   <thead>
@@ -79,7 +74,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Zásuvková lišta - LEDVANCE MULTI POWER SOCKET EU</td>
       <td>1</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">localtuya</a></td>
     </tr>
   </tbody>
   <thead>
@@ -108,6 +103,20 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
       <td>ESP32-cam</td>
       <td>1</td>
       <td>Postupná migrace -> FoxHomeIoT</td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>Ostatní</th>
+      <th>Počet kusů</th>
+      <th>Použitá integrace</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Odvlhčovač vzduchu Concept OV2220 Perfect Air Smart</td>
+      <td>1</td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
     </tr>
   </tbody>
 </table>

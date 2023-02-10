@@ -60,3 +60,20 @@
       message: Plasty
       title: Odpadky
   mode: single
+- id: '1675859692648'
+  alias: Sušička - notifikace
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.susicka_nadrz
+    attribute: raw_state
+    from: '0'
+    to: '8'
+  condition: []
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      message: Plná nádrž!!
+      title: Sušička
+  mode: single
