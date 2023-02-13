@@ -213,6 +213,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 - [Notifikace odpadky - směs](#notifikace-odpadky---směs) 
 - [Notifikace odpadky - papír](#notifikace-odpadky---papír)
 - [Notifikace odpadky - plasty](#notifikace-odpadky---plasty)
+- [Notifikace odvlhčovač - plná nádrž](#notifikace-odvlhčovač---plná-nádrž)
 
 ## Frontend: změna tématu 
 
@@ -301,6 +302,30 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
     data:
       message: Plasty
       title: Odpadky
+  mode: single
+```
+
+## Notifikace odvlhčovač - plná nádrž
+
+Notifikace zaslaná na mobilní telefon o plné nádrži odvlhčovače.
+
+```yaml
+- id: '1675859692648'
+  alias: Sušička - notifikace
+  description: Notifikace plné nádrže odvlhčovače
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.susicka_nadrz
+    attribute: raw_state
+    from: 0
+    to: 8
+  condition: []
+  action:
+  - service: notify.mobile_app_redmi_note_8_pro
+    data:
+      message: Plná nádrž!!
+      title: Sušička
   mode: single
 ```
 
