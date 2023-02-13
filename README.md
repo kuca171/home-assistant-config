@@ -1,7 +1,7 @@
 # Kuca home-assistant-config
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.2.2%20-green)](https://github.com/home-assistant/core/releases/tag/2023.2.2)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.2.4%20-green)](https://github.com/home-assistant/core/releases/tag/2023.2.4)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 ![alt tag](mydashboard.bmp)
@@ -214,6 +214,8 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 - [Notifikace odpadky - papír](#notifikace-odpadky---papír)
 - [Notifikace odpadky - plasty](#notifikace-odpadky---plasty)
 - [Notifikace odvlhčovač - plná nádrž](#notifikace-odvlhčovač---plná-nádrž)
+- [Odvlhčovač - ranní zapnutí](#odvlhčovač---ranní zapnutí)
+- [Odvlhčovač - večení zapnutí](#odvlhčovač---ranní zapnutí)
 
 ## Frontend: změna tématu 
 
@@ -327,6 +329,40 @@ Notifikace zaslaná na mobilní telefon o plné nádrži odvlhčovače.
       message: Plná nádrž!!
       title: Sušička
   mode: single
+```
+
+## Odvlhčovač - ranní zapnutí
+
+```yaml
+alias: Sušička - ranní zapnutí
+description: Zapnutí sušičky každý den ráno
+trigger:
+  - platform: time
+    at: "07:00:00"
+condition: []
+action:
+  - type: turn_on
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.susicka
+    domain: switch
+mode: single
+```
+
+## Odvlhčovač - večení vypnutí
+
+```yaml
+alias: Sušička - večení vypnutí
+description: Vypnutí sušičky každý večer
+trigger:
+  - platform: time
+    at: "20:00:00"
+condition: []
+action:
+  - type: turn_off
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.susicka
+    domain: switch
+mode: single
 ```
 
 # Další projekty

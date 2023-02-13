@@ -77,3 +77,29 @@
       message: Plná nádrž!!
       title: Sušička
   mode: single
+- id: '1676308017304'
+  alias: Sušička - večení vypnutí
+  description: Vypnutí sušičky každý večer
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.susicka
+    domain: switch
+  mode: single
+- id: '1676314903687'
+  alias: Sušička - ranní zapnutí
+  description: Zapnutí sušičky každý den ráno
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.susicka
+    domain: switch
+  mode: single
