@@ -214,8 +214,8 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 - [Notifikace odpadky - papír](#notifikace-odpadky---papír)
 - [Notifikace odpadky - plasty](#notifikace-odpadky---plasty)
 - [Notifikace odvlhčovač - plná nádrž](#notifikace-odvlhčovač---plná-nádrž)
-- [Odvlhčovač - ranní zapnutí](#odvlhčovač---ranní zapnutí)
-- [Odvlhčovač - večení zapnutí](#odvlhčovač---ranní zapnutí)
+- [Odvlhčovač - ranní zapnutí](#odvlhčovač---ranní-zapnutí)
+- [Odvlhčovač - večení zapnutí](#odvlhčovač---ranní-zapnutí)
 
 ## Frontend: změna tématu 
 
