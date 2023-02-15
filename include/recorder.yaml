@@ -35,9 +35,6 @@ include:
     - sensor.disk_free
     - sensor.disk_use_config
     - sensor.mariadb_velikost
-    - light.c37_smart_mini_rgbcct_bulb
-    - light.c37_smart_mini_rgbcct_bulb_2
-    - light.c37_smart_mini_rgbcct_bulb_3
     - sensor.general_waste
     - sensor.paper
     - sensor.plastic
@@ -56,17 +53,15 @@ include:
     - switch.zasuvka_pc_3
     - switch.zasuvka_pc_usb
     - sensor.zasuvky_pc_spotreba
-    - binary_sensor.susicka_nadrz
-    - binary_sensor.susicka_rozmrazovani
-    - binary_sensor.susicka_unknown_101
-    - binary_sensor.susicka_unknown_7
-    - number.susicka_cilova_vlhkost
-    - select.susicka_rezim
-    - select.susicka_vetrak
-    - sensor.susicka_teplota
-    - sensor.susicka_vlhkost
-    - switch.susicka
-    - switch.susicka_nocni_rezim
-    - switch.susicka_uv
-    - device_tracker.jirka_kuca
-    - person.kuca
+    - binary_sensor.odvlhcovac_ov2220_nadrz
+    - binary_sensor.odvlhcovac_ov2220_rozmrazovani
+    - binary_sensor.odvlhcovac_ov2220_unknown101
+    - binary_sensor.odvlhcovac_ov2220_unknown7
+    - number.odvlhcovac_ov2220_cilova_vlhkost
+    - select.odvlhcovac_ov2220_rezim
+    - select.odvlhcovac_ov2220_vetrak
+    - sensor.odvlhcovac_ov2220_teplota
+    - sensor.odvlhcovac_ov2220_vlhkost
+    - switch.odvlhcovac_ov2220
+    - switch.odvlhcovac_ov2220_nocni_rezim
+    - switch.odvlhcovac_ov2220_uv
