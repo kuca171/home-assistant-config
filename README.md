@@ -213,9 +213,9 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 - [Notifikace odpadky - směs](#notifikace-odpadky---směs) 
 - [Notifikace odpadky - papír](#notifikace-odpadky---papír)
 - [Notifikace odpadky - plasty](#notifikace-odpadky---plasty)
-- [Notifikace odvlhčovač - plná nádrž](#notifikace-odvlhčovač---plná-nádrž)
-- [Odvlhčovač - ranní zapnutí](#odvlhčovač---ranní-zapnutí)
-- [Odvlhčovač - večení zapnutí](#odvlhčovač---ranní-zapnutí)
+- [Odvlhčovač - večerní vypnutí](#odvlhčovač---večerní-vypnutí)
+- [Odvlhčovač - ranní spuštění](#odvlhčovač---ranní-spuštění)
+- [Notifikace - odvlhčovač plná nádrž](#notifikace---odvlhčovač-plná-nádrž)
 
 ## Frontend: změna tématu 
 
@@ -307,62 +307,24 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
   mode: single
 ```
 
-## Notifikace odvlhčovač - plná nádrž
+## Odvlhčovač - večerní vypnutí
 
-Notifikace zaslaná na mobilní telefon o plné nádrži odvlhčovače.
+Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
 
 ```yaml
-- id: '1675859692648'
-  alias: Sušička - notifikace
-  description: Notifikace plné nádrže odvlhčovače
+- id: '1676470917777'
+  alias: Odvlhčovač - večerní vypnutí
+  description: Vypnutí odvlhčovače každý večer
   trigger:
-  - platform: state
-    entity_id:
-    - binary_sensor.susicka_nadrz
-    attribute: raw_state
-    from: 0
-    to: 8
+  - platform: time
+    at: '20:00:00'
   condition: []
   action:
-  - service: notify.mobile_app_redmi_note_8_pro
-    data:
-      message: Plná nádrž!!
-      title: Sušička
-  mode: single
-```
-
-## Odvlhčovač - ranní zapnutí
-
-```yaml
-alias: Sušička - ranní zapnutí
-description: Zapnutí sušičky každý den ráno
-trigger:
-  - platform: time
-    at: "07:00:00"
-condition: []
-action:
-  - type: turn_on
-    device_id: 1f286535060b37794deddf2cf4e02b47
-    entity_id: switch.susicka
-    domain: switch
-mode: single
-```
-
-## Odvlhčovač - večení vypnutí
-
-```yaml
-alias: Sušička - večení vypnutí
-description: Vypnutí sušičky každý večer
-trigger:
-  - platform: time
-    at: "20:00:00"
-condition: []
-action:
   - type: turn_off
     device_id: 1f286535060b37794deddf2cf4e02b47
-    entity_id: switch.susicka
+    entity_id: switch.odvlhcovac_ov2220
     domain: switch
-mode: single
+  mode: single
 ```
 
 # Další projekty
