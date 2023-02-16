@@ -367,6 +367,6 @@ mode: single
 
 # Další projekty
 
-**- Jak integrovat Ledvance zásuvkovou lištu do Home Assistant -> https://github.com/kuca171/hassio-localtuya-my-device-configuration**
+**- Jak integrovat Ledvance zásuvkovou lištu do Home Assistant -> https://github.com/kuca171/hassio-localtuya-device-configuration**
 
-**- Jak integrovat Odvlhčovač vzduchu Concept OV2220 Perfect Air Smart do Home Assistant -> https://github.com/kuca171/hassio-localtuya-my-device-configuration**
+**- Jak integrovat Odvlhčovač vzduchu Concept OV2220 Perfect Air Smart do Home Assistant -> https://github.com/kuca171/hassio-localtuya-device-configuration**
