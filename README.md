@@ -327,6 +327,26 @@ Každodenní večerní vypnutí odvlhčovače.
   mode: single
 ```
 
+## Odvlhčovač - ranní spuštění
+
+Každodenní ranní spuštění odvlhčovače.
+
+```yaml
+- id: '1676470978930'
+  alias: Odvlhčovač - ranní spuštění
+  description: Spuštění odvlhčovače každé ráno
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.odvlhcovac_ov2220
+    domain: switch
+  mode: single
+```
+
 # Další projekty
 
 **- Jak integrovat Ledvance zásuvkovou lištu do Home Assistant -> https://github.com/kuca171/hassio-localtuya-device-configuration**
