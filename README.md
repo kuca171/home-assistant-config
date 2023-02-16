@@ -309,7 +309,7 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
 
 ## Odvlhčovač - večerní vypnutí
 
-Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
+Každodenní večerní vypnutí odvlhčovače.
 
 ```yaml
 - id: '1676470917777'
