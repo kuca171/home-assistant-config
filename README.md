@@ -347,6 +347,31 @@ Každodenní ranní spuštění odvlhčovače.
   mode: single
 ```
 
+## Notifikace - odvlhčovač plná nádrž
+
+Notifikace na plnou nádrž odvlhčovače.
+
+```yaml
+- id: '1676471091438'
+  alias: Notifikace - odvlhčovač plná nádrž
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.odvlhcovac_ov2220_nadrz
+    attribute: raw_state
+    from: 0
+    to: 8
+  condition: []
+  action:
+  - device_id: 6cf5d71fbaab6cc9446e7b7d8fe2750f
+    domain: mobile_app
+    type: notify
+    message: Odvlhčovač
+    title: Plná nádrž
+  mode: single
+```
+
 # Další projekty
 
 **- Jak integrovat Ledvance zásuvkovou lištu do Home Assistant -> https://github.com/kuca171/hassio-localtuya-device-configuration**
