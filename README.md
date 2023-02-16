@@ -40,11 +40,6 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
       <td></td>
     </tr>
     <tr>
-      <td><s>Samsung EVO Plus microSDXC 64GB MB-MC64HA/EU</s></td>
-      <td><s>1</s></td>
-      <td></td>
-    </tr>
-    <tr>
       <td>Verbatim Vx500 SSD 120GB</td>
       <td>1</td>
       <td></td>
@@ -137,9 +132,6 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
   </thead>
   <tbody>
     <tr>
-      <td><s><a href="https://github.com/esphome/esphome">ESPhome</a></s></td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/home-assistant/addons/tree/master/configurator">File editor</a></td>
     </tr>
     <tr>
@@ -161,13 +153,7 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
       <td><a href="https://github.com/hassio-addons/addon-node-red">Node-RED</a></td>
     </tr>
     <tr>
-      <td><s><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></s></td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></td>
-    </tr>
-    <tr>
-      <td><s><a href="https://github.com/hassio-addons/addon-vscode/">Studio Code Server</a></s></td>
     </tr>
   </tbody>
 </table>
@@ -188,13 +174,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
   </thead>
   <tbody>
     <tr>
-      <td><s><a href="https://github.com/jcwillox/hass-auto-backup">Auto backup</a></s></td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/bruxy70/Garbage-Collection/">Garbage Collection</a></td>
-    </tr>
-    <tr>
-      <td><s><a href="https://github.com/basnijholt/lovelace-ios-themes">iOS Themes</a></s></td>
     </tr>
     <tr>
       <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
