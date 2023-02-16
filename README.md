@@ -56,7 +56,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Solight LED SMART WIFI RGB žárovka (wz432)</td>
       <td>3</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">localtuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
     </tr>
   </tbody>
   <thead>
@@ -70,7 +70,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Zásuvková lišta - LEDVANCE MULTI POWER SOCKET EU</td>
       <td>1</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">localtuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
     </tr>
   </tbody>
   <thead>
