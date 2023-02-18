@@ -101,6 +101,6 @@
   - device_id: 6cf5d71fbaab6cc9446e7b7d8fe2750f
     domain: mobile_app
     type: notify
-    message: Odvlhčovač
-    title: Plná nádrž
+    message: 'Plná nádrž '
+    title: 'Odvlhčovač '
   mode: single

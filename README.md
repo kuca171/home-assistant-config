@@ -326,8 +326,8 @@ Notifikace zaslaná na mobilní telefon o plné nádrži odvlhčovače.
   action:
   - service: notify.mobile_app_redmi_note_8_pro
     data:
-      message: Plná nádrž!!
-      title: Sušička
+      message: Odvlhčovač 
+      title: Plná nádrž 
   mode: single
 ```
 
