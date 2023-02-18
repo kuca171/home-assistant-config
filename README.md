@@ -40,11 +40,6 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
       <td></td>
     </tr>
     <tr>
-      <td><s>Samsung EVO Plus microSDXC 64GB MB-MC64HA/EU</s></td>
-      <td><s>1</s></td>
-      <td></td>
-    </tr>
-    <tr>
       <td>Verbatim Vx500 SSD 120GB</td>
       <td>1</td>
       <td></td>
@@ -61,7 +56,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Solight LED SMART WIFI RGB žárovka (wz432)</td>
       <td>3</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">localtuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
     </tr>
   </tbody>
   <thead>
@@ -75,7 +70,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Zásuvková lišta - LEDVANCE MULTI POWER SOCKET EU</td>
       <td>1</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">localtuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
     </tr>
   </tbody>
   <thead>
@@ -137,9 +132,6 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
   </thead>
   <tbody>
     <tr>
-      <td><s><a href="https://github.com/esphome/esphome">ESPhome</a></s></td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/home-assistant/addons/tree/master/configurator">File editor</a></td>
     </tr>
     <tr>
@@ -161,13 +153,7 @@ Použité doplňky [Supervisora](https://www.home-assistant.io/getting-started/)
       <td><a href="https://github.com/hassio-addons/addon-node-red">Node-RED</a></td>
     </tr>
     <tr>
-      <td><s><a href="https://github.com/hassio-addons/addon-phpmyadmin">phpMyAdmin</a></s></td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/hassio-addons/addon-ssh">SSH & Web Terminal</a></td>
-    </tr>
-    <tr>
-      <td><s><a href="https://github.com/hassio-addons/addon-vscode/">Studio Code Server</a></s></td>
     </tr>
   </tbody>
 </table>
@@ -188,13 +174,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
   </thead>
   <tbody>
     <tr>
-      <td><s><a href="https://github.com/jcwillox/hass-auto-backup">Auto backup</a></s></td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/bruxy70/Garbage-Collection/">Garbage Collection</a></td>
-    </tr>
-    <tr>
-      <td><s><a href="https://github.com/basnijholt/lovelace-ios-themes">iOS Themes</a></s></td>
     </tr>
     <tr>
       <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
@@ -213,9 +193,9 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 - [Notifikace odpadky - směs](#notifikace-odpadky---směs) 
 - [Notifikace odpadky - papír](#notifikace-odpadky---papír)
 - [Notifikace odpadky - plasty](#notifikace-odpadky---plasty)
-- [Notifikace odvlhčovač - plná nádrž](#notifikace-odvlhčovač---plná-nádrž)
-- [Odvlhčovač - ranní zapnutí](#odvlhčovač---ranní-zapnutí)
-- [Odvlhčovač - večení zapnutí](#odvlhčovač---ranní-zapnutí)
+- [Odvlhčovač - večerní vypnutí](#odvlhčovač---večerní-vypnutí)
+- [Odvlhčovač - ranní spuštění](#odvlhčovač---ranní-spuštění)
+- [Notifikace - odvlhčovač plná nádrž](#notifikace---odvlhčovač-plná-nádrž)
 
 ## Frontend: změna tématu 
 
@@ -307,66 +287,73 @@ Notifikace zaslaná na mobilní telefon o vyvezení popelnice.
   mode: single
 ```
 
-## Notifikace odvlhčovač - plná nádrž
+## Odvlhčovač - večerní vypnutí
 
-Notifikace zaslaná na mobilní telefon o plné nádrži odvlhčovače.
+Každodenní večerní vypnutí odvlhčovače.
 
 ```yaml
-- id: '1675859692648'
-  alias: Sušička - notifikace
-  description: Notifikace plné nádrže odvlhčovače
+- id: '1676470917777'
+  alias: Odvlhčovač - večerní vypnutí
+  description: Vypnutí odvlhčovače každý večer
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.odvlhcovac_ov2220
+    domain: switch
+  mode: single
+```
+
+## Odvlhčovač - ranní spuštění
+
+Každodenní ranní spuštění odvlhčovače.
+
+```yaml
+- id: '1676470978930'
+  alias: Odvlhčovač - ranní spuštění
+  description: Spuštění odvlhčovače každé ráno
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 1f286535060b37794deddf2cf4e02b47
+    entity_id: switch.odvlhcovac_ov2220
+    domain: switch
+  mode: single
+```
+
+## Notifikace - odvlhčovač plná nádrž
+
+Notifikace na plnou nádrž odvlhčovače.
+
+```yaml
+- id: '1676471091438'
+  alias: Notifikace - odvlhčovač plná nádrž
+  description: ''
   trigger:
   - platform: state
     entity_id:
-    - binary_sensor.susicka_nadrz
+    - binary_sensor.odvlhcovac_ov2220_nadrz
     attribute: raw_state
     from: 0
     to: 8
   condition: []
   action:
-  - service: notify.mobile_app_redmi_note_8_pro
-    data:
-      message: Odvlhčovač 
-      title: Plná nádrž 
+  - device_id: 6cf5d71fbaab6cc9446e7b7d8fe2750f
+    domain: mobile_app
+    type: notify
+    message: Plná nádrž
+    title: Odvlhčovač
   mode: single
-```
-
-## Odvlhčovač - ranní zapnutí
-
-```yaml
-alias: Sušička - ranní zapnutí
-description: Zapnutí sušičky každý den ráno
-trigger:
-  - platform: time
-    at: "07:00:00"
-condition: []
-action:
-  - type: turn_on
-    device_id: 1f286535060b37794deddf2cf4e02b47
-    entity_id: switch.susicka
-    domain: switch
-mode: single
-```
-
-## Odvlhčovač - večení vypnutí
-
-```yaml
-alias: Sušička - večení vypnutí
-description: Vypnutí sušičky každý večer
-trigger:
-  - platform: time
-    at: "20:00:00"
-condition: []
-action:
-  - type: turn_off
-    device_id: 1f286535060b37794deddf2cf4e02b47
-    entity_id: switch.susicka
-    domain: switch
-mode: single
 ```
 
 # Další projekty
 
-**- Jak integrovat Ledvance zásuvkovou lištu do Home Assistant -> https://github.com/kuca171/hassio-localtuya-my-device-configuration**
+**- Jak integrovat Ledvance zásuvkovou lištu do Home Assistant -> https://github.com/kuca171/hassio-localtuya-device-configuration**
 
-**- Jak integrovat Odvlhčovač vzduchu Concept OV2220 Perfect Air Smart do Home Assistant -> https://github.com/kuca171/hassio-localtuya-my-device-configuration**
+**- Jak integrovat Odvlhčovač vzduchu Concept OV2220 Perfect Air Smart do Home Assistant -> https://github.com/kuca171/hassio-localtuya-device-configuration**
