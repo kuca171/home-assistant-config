@@ -9,57 +9,6 @@
     service: frontend.set_theme
     data:
       name: '{{ states.input_select.theme.state }}'
-- id: '1666183776295'
-  alias: Notifikace odpadky - směs
-  description: Notifikace na vyvyzení popelnice
-  trigger:
-  - platform: time
-    at: '20:00:00'
-  condition:
-  - condition: state
-    entity_id: sensor.general_waste
-    attribute: days
-    state: 0
-  action:
-  - service: notify.mobile_app_redmi_note_8_pro
-    data:
-      title: Odpadky
-      message: Směs
-  mode: single
-- id: '1666183903283'
-  alias: Notifikace odpadky - papír
-  description: Notifikace na vyvezení popelnice
-  trigger:
-  - platform: time
-    at: '20:00:00'
-  condition:
-  - condition: state
-    entity_id: sensor.paper
-    attribute: days
-    state: 0
-  action:
-  - service: notify.mobile_app_redmi_note_8_pro
-    data:
-      title: Odpadky
-      message: Papír
-  mode: single
-- id: '1666184054627'
-  alias: Notifikace odpadky - plasty
-  description: Notifikace na vyvezení popelnice
-  trigger:
-  - platform: time
-    at: '20:00:00'
-  condition:
-  - condition: state
-    entity_id: sensor.plastic
-    attribute: days
-    state: 0
-  action:
-  - service: notify.mobile_app_redmi_note_8_pro
-    data:
-      message: Plasty
-      title: Odpadky
-  mode: single
 - id: '1676470917777'
   alias: Odvlhčovač - večerní vypnutí
   description: Vypnutí odvlhčovače každý večer
@@ -98,9 +47,25 @@
     to: 8
   condition: []
   action:
-  - device_id: 6cf5d71fbaab6cc9446e7b7d8fe2750f
+  - device_id: b385cab1771708084fc77aa7f7695937
     domain: mobile_app
     type: notify
     message: 'Plná nádrž '
-    title: 'Odvlhčovač '
+    title: Odvlhcovač
+  mode: single
+- id: '1685450310751'
+  alias: Notifikace - odpadky
+  description: Notifikace na vyvážení popelnic
+  trigger:
+  - platform: calendar
+    event: start
+    offset: 0:0:0
+    entity_id: calendar.odpadky
+  condition: []
+  action:
+  - device_id: b385cab1771708084fc77aa7f7695937
+    domain: mobile_app
+    type: notify
+    title: Odpadky
+    message: '{{ states(''sensor.odpad_typ'') }}'
   mode: single
