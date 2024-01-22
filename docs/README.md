@@ -6,13 +6,32 @@
 
 ![alt tag](img/mydashboard.png)
 
-Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
+Dokumentace pro mé konfigurační soubory [Home Assistant](https://home-assistant.io/).
 
 # Obsah
 
+- [Historie](#historie)
+- [Architektura](#architektura)
 - [Použité zařízení](#použité-zařízení)
 - [Hacs integrace a témata](#hacs-integrace-a-témata)
+- [Automatizace](#automatizace)
+- [Printscreeny dashboardu](#printscreeny-dashboardu)
+- [Odkazy na mé další projekty](#odkazy-na-mé-další-projekty)
 
+# Historie
+
+Popsat začátky pokusů s arduinem, esp32/8266... node-red až po home assistant.
+
+home assistant - docker supervisor
+home assistant os
+home assistant docker core
+
+# Architektura
+
+popsat architekturu sítě od routeru, přes wifi... 
+dál načrtnout technologie esphome, zigbee, z2m, mqtt...
+
+udělat na to nákresy/modely
 
 # Použité zařízení
 
@@ -141,3 +160,17 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 </table>
 
 <!-- end-table -->
+
+# Automatizace
+
+popsat použité automatizace
+
+# Printscreeny dashboardu
+
+nadpis mluví za vše
+
+# Odkazy na mé další projekty
+
+články z blogu?
+
+local tuya integrace zařízení
