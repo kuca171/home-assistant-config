@@ -4,17 +4,27 @@
 [![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2024.1.2%20-green)](https://github.com/home-assistant/core/releases/tag/2024.1.2)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
+
+# ROZPRACOVÁNO / UNDER CONSTRUCTION !!!
+
+Ne všechny informace jsou aktuální. Pracuje se na aktuální verzi tohoto dokumentu.
+
 ![alt tag](www/mydashboard.png)
 
 Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 
 # Obsah
 
+- [Popis mé konfigurace](#popis-mé-konfigurace)
 - [Použité zařízení](#použité-zařízení)
 - [Doplňky](#doplňky)
 - [Hacs integrace a témata](#hacs-integrace-a-témata)
 - [Automatizace](#automatizace)
-- [Další projekty](#další-projekty)
+- [Moje návody a další projekty](#moje-návody-a-další-projekty)
+
+# Popis mé konfigurace
+
+
 
 # Použité zařízení
 
@@ -25,17 +35,22 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <th>Server</th>
       <th>Počet kusů </th>
-      <th></th>
+      <th>OS</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Raspberry Pi 4 Model B - 2GB RAM</td>
       <td>1</td>
-      <td></td>
+      <td>Debian GNU/Linux 11 (bullseye)</td>
     </tr>
     <tr>
       <td>Verbatim Vx500 SSD 120GB</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Home Assistant SkyConnect</td>
       <td>1</td>
       <td></td>
     </tr>
@@ -51,7 +66,12 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Solight LED SMART WIFI RGB žárovka (wz432)</td>
       <td>3</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/"><s>local tuya</s></a><br /><a href="https://esphome.io/">ESPHome</a></td>
+    </tr>
+    <tr>
+      <td>LEDVANCE SMART+ CL A60 E27 Tunable white</td>
+      <td>1</td>
+      <td><a href="https://www.zigbee2mqtt.io/devices/4058075729001.html#ledvance-4058075729001">Zigbee2mqtt</a></td>
     </tr>
   </tbody>
   <thead>
@@ -65,7 +85,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>Zásuvková lišta - LEDVANCE MULTI POWER SOCKET EU</td>
       <td>1</td>
-      <td><a href="https://github.com/rospogrigio/localtuya/">local tuya</a></td>
+      <td><a href="https://github.com/rospogrigio/localtuya/"><s>local tuya</s></a><br /><a href="https://esphome.io/">ESPHome</a></td>
     </tr>
   </tbody>
   <thead>
@@ -79,7 +99,7 @@ Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
     <tr>
       <td>ESP32 + BME280</td>
       <td>1</td>
-      <td><a href="https://github.com/kuca171/FoxHomeIoT-ESP">FoxHomeIoT</a></td>
+      <td><a href="https://esphome.io/">ESPHome</a></td>
     </tr>
   </tbody>
   <thead>
