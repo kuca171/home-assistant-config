@@ -1,17 +1,12 @@
 # Kuca home-assistant-config
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2023.9.2%20-green)](https://github.com/home-assistant/core/releases/tag/2023.9.2)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2024.1.2%20-green)](https://github.com/home-assistant/core/releases/tag/2024.1.2)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
-![alt tag](mydashboard.bmp)
+![alt tag](mydashboard.png)
 
 Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
-
-### Do budoucna plánuji
-
-- [ ] Přidání LED pásků (rozpracováno -> Wemos d1 mini) -> FoxHomeIoT
-- [ ] Solární venkovní meteostanice (rozpracováno -> Wemos d1 mini + BME280) -> FoxHomeIoT
 
 # Obsah
 
