@@ -4,7 +4,7 @@
 [![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2024.1.2%20-green)](https://github.com/home-assistant/core/releases/tag/2024.1.2)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
-![alt tag](www/mydashboard.png)
+![alt tag](docs/img//mydashboard.png)
 
 Mé konfigurační soubory pro [Home Assistant](https://home-assistant.io/).
 
