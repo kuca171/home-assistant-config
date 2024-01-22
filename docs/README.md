@@ -178,6 +178,9 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
     message: '{{ states(''sensor.odpad_typ'') }}'
     title: Odpadky
   mode: single
+```
+
+  ```yaml
 - id: '1695126128511'
   alias: Notifikace - odvlhčovač
   description: Notifikace - odvlhčovač plná nádrž
@@ -195,6 +198,9 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
     title: Odvlhčovač
     message: Plná nádrž
   mode: single
+```
+
+```yaml
 - id: '1695126213216'
   alias: Odvlhčovač - ranní spuštění
   description: Spuštění odvlhčovače každé ráno
@@ -208,6 +214,9 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
     entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
     domain: humidifier
   mode: single
+  ```
+
+```yaml
 - id: '1695126309508'
   alias: Odvlhčovač - večerní vypnutí
   description: Vypnutí odvlhčovače každý večer
