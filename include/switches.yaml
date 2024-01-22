@@ -1,5 +1,0 @@
-# chlazeni procesoru
-- platform: rpi_gpio
-  ports:
-    14: RPI Cooling Fan
-    
