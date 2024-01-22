@@ -161,7 +161,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 # Automatizace
 
-``
+```yaml
 - id: '1695125949492'
   alias: Notifikace - odpadky
   description: Notifikace na vyvážení popelnic
@@ -221,7 +221,7 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
     entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
     domain: humidifier
   mode: single
-``
+```
 
 # Printscreeny dashboardu
 
