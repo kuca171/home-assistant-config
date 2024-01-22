@@ -161,7 +161,67 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 # Automatizace
 
-popsat použité automatizace
+``
+- id: '1695125949492'
+  alias: Notifikace - odpadky
+  description: Notifikace na vyvážení popelnic
+  trigger:
+  - platform: calendar
+    event: start
+    offset: 0:0:0
+    entity_id: calendar.odpadky
+  condition: []
+  action:
+  - device_id: 7a280933a6de48eafd2f52e43407db52
+    domain: mobile_app
+    type: notify
+    message: '{{ states(''sensor.odpad_typ'') }}'
+    title: Odpadky
+  mode: single
+- id: '1695126128511'
+  alias: Notifikace - odvlhčovač
+  description: Notifikace - odvlhčovač plná nádrž
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.odvlhcovac_ov2220_tank
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 7a280933a6de48eafd2f52e43407db52
+    domain: mobile_app
+    type: notify
+    title: Odvlhčovač
+    message: Plná nádrž
+  mode: single
+- id: '1695126213216'
+  alias: Odvlhčovač - ranní spuštění
+  description: Spuštění odvlhčovače každé ráno
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: d3b9adc81b4e1490dd7dd77083bccce6
+    entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
+    domain: humidifier
+  mode: single
+- id: '1695126309508'
+  alias: Odvlhčovač - večerní vypnutí
+  description: Vypnutí odvlhčovače každý večer
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: d3b9adc81b4e1490dd7dd77083bccce6
+    entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
+    domain: humidifier
+  mode: single
+``
 
 # Printscreeny dashboardu
 
