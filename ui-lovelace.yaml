@@ -1,0 +1,261 @@
+title: Domov
+views:
+  - title: Home
+    path: home
+    icon: mdi:home
+    badges: []
+    cards:
+      - square: false
+        type: grid
+        cards:
+          - type: custom:clock-weather-card
+            entity: weather.forecast_domov
+          - type: custom:mushroom-template-card
+            primary: '{{ states(''sensor.odpad_typ'') }}'
+            secondary: '{{ states(''sensor.odpad'') }}'
+            icon: mdi:trash-can
+            fill_container: false
+          - type: entities
+            entities:
+              - entity: switch.odvlhcovac_ov2220
+              - entity: binary_sensor.odvlhcovac_ov2220_nadrz
+              - entity: number.odvlhcovac_ov2220_cilova_vhlkost
+              - entity: select.odvlhcovac_ov2220_rezim
+              - entity: select.odvlhcovac_ov2220_vetrak
+            state_color: true
+        columns: 1
+      - square: true
+        type: grid
+        cards:
+          - type: custom:mushroom-light-card
+            entity: light.kuchyne_vlevo
+            fill_container: true
+            layout: vertical
+            use_light_color: false
+            show_brightness_control: true
+            show_color_temp_control: true
+            show_color_control: false
+            collapsible_controls: true
+          - type: custom:mushroom-light-card
+            entity: light.kuchyne_pc
+            fill_container: true
+            layout: vertical
+            use_light_color: true
+            show_brightness_control: true
+            show_color_control: false
+            show_color_temp_control: true
+            collapsible_controls: true
+          - type: custom:mushroom-light-card
+            entity: light.kuchyne_vpravo
+            fill_container: true
+            layout: vertical
+            collapsible_controls: true
+            show_color_temp_control: true
+            use_light_color: true
+            show_brightness_control: true
+            show_color_control: false
+        columns: 3
+      - square: true
+        type: grid
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: switch.zasuvka_pc_1
+            fill_container: true
+            layout: vertical
+          - type: custom:mushroom-entity-card
+            entity: switch.zasuvka_pc_2
+            fill_container: true
+            layout: vertical
+          - type: custom:mushroom-entity-card
+            entity: switch.zasuvka_pc_3
+            fill_container: true
+            layout: vertical
+          - type: custom:mushroom-entity-card
+            entity: switch.zasuvka_pc_usb
+            fill_container: true
+            layout: vertical
+          - type: custom:mushroom-entity-card
+            entity: sensor.zasuvka_pc_prikon
+            layout: vertical
+            fill_container: true
+          - type: custom:mushroom-entity-card
+            entity: sensor.zasuvka_pc_proud
+            fill_container: true
+            layout: vertical
+        columns: 3
+      - type: picture-elements
+        style: |
+          ha-card { height: 140px !important; }
+        elements:
+          - type: state-badge
+            entity: sensor.odvlhcovac_ov2220_teplota
+            style:
+              top: 32%
+              left: 55%
+              color: transparent
+              '--label-badge-text-color': black
+              '--label-badge-blue': green
+              '--label-badge-background-color': white
+          - type: state-badge
+            entity: sensor.odvlhcovac_ov2220_vlhkost
+            style:
+              top: 20%
+              left: 70%
+              color: transparent
+              '--label-badge-text-color': black
+              '--label-badge-blue': green
+              '--label-badge-background-color': white
+          - type: state-badge
+            entity: sensor.foxhomeiot_bridge_vlhkost_bridge
+            style:
+              top: 70%
+              left: 15%
+              color: transparent
+              '--label-badge-text-color': black
+              '--label-badge-blue': green
+              '--label-badge-background-color': white
+          - type: state-badge
+            entity: sensor.foxhomeiot_bridge_teplota_bridge
+            style:
+              top: 65%
+              left: 50%
+              color: transparent
+              '--label-badge-text-color': black
+              '--label-badge-blue': green
+              '--label-badge-background-color': white
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.kuchyne_pc
+            style:
+              top: 22%
+              left: 20%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.kuchyne_vlevo
+            style:
+              top: 24%
+              left: 24%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.kuchyne_vpravo
+            style:
+              top: 26%
+              left: 20%
+        image: http://10.0.0.112:8123/local/home.png
+  - title: r-pi
+    path: r-pi
+    icon: mdi:raspberry-pi
+    badges: []
+    cards:
+      - square: false
+        type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: Odkazy
+          - square: false
+            type: grid
+            cards:
+              - type: custom:mushroom-template-card
+                primary: Node-red
+                secondary: http://10.0.0.112:1880
+                icon: mdi:chart-sankey-variant
+                icon_color: red
+                tap_action:
+                  action: url
+                  url_path: http://10.0.0.112:1880
+              - type: custom:mushroom-template-card
+                primary: Portainer
+                secondary: http://10.0.0.112:9000
+                icon: mdi:docker
+                icon_color: blue
+                tap_action:
+                  action: url
+                  url_path: http://10.0.0.112:9000
+              - type: custom:mushroom-template-card
+                primary: RPi monitor
+                secondary: http://10.0.0.112:8888
+                icon: mdi:raspberry-pi
+                icon_color: green
+                tap_action:
+                  action: url
+                  url_path: http://10.0.0.112:8888
+            columns: 2
+          - type: custom:mushroom-title-card
+            title: Síť
+          - type: custom:mushroom-entity-card
+            entity: sensor.speedtest_upload
+            fill_container: true
+          - type: custom:mushroom-entity-card
+            entity: sensor.speedtest_download
+          - type: custom:mushroom-entity-card
+            entity: sensor.speedtest_ping
+        columns: 1
+      - square: false
+        type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: HACS
+          - type: custom:mushroom-entity-card
+            entity: sensor.hacs
+          - type: custom:mushroom-title-card
+            title: Recorder
+          - type: custom:mushroom-entity-card
+            entity: sensor.select_sql_query
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.select_sql_query
+            hours_to_show: 48
+        columns: 1
+      - square: false
+        type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: RPi
+          - type: custom:mushroom-title-card
+            title: ''
+          - type: custom:mushroom-entity-card
+            entity: sensor.last_boot
+          - type: custom:mushroom-entity-card
+            entity: sensor.processor_use
+          - type: custom:mushroom-entity-card
+            entity: sensor.memory_free
+          - type: custom:mushroom-entity-card
+            entity: sensor.memory_use
+          - type: custom:mushroom-entity-card
+            entity: sensor.memory_use_percent
+          - type: custom:mushroom-title-card
+            title: ''
+          - type: custom:mushroom-title-card
+            title: SSD
+          - type: custom:mushroom-title-card
+            title: ''
+          - type: custom:mushroom-entity-card
+            entity: sensor.disk_free
+          - type: custom:mushroom-entity-card
+            entity: sensor.disk_use_config
+          - type: custom:mushroom-entity-card
+            entity: sensor.disk_use_percent_config
+          - type: custom:mushroom-entity-card
+            entity: sensor.swap_free
+          - type: custom:mushroom-entity-card
+            entity: sensor.swap_use
+          - type: custom:mushroom-entity-card
+            entity: sensor.swap_use_percent
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.disk_free
+                color: grey
+              - entity: sensor.disk_use_config
+                color: red
+            hours_to_show: 48
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.memory_free
+                color: green
+              - entity: sensor.memory_use
+                color: yellow
+            hours_to_show: 48
+        columns: 2

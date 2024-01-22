@@ -1,0 +1,31 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+lovelace:
+  mode: storage
+
+  resources:
+    - url: /local/community/clock-weather-card/clock-weather-card.js
+      type: module
+    - url: /local/community/lovelace-mushroom/mushroom.js
+      type: module
+    - url: /local/community/mini-graph-card/mini-graph-card-bundle.js?v=0.11.0
+      type: module
+    - url: https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu:wght@300&display=swap
+      type: css
+
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Logování, historie a zálohy
+recorder: !include include/recorder.yaml
+logger: !include include/logger.yaml
+
+sensor: !include_dir_merge_list include/sensors/

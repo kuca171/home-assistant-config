@@ -1,0 +1,29 @@
+## Date/Time
+- platform: time_date
+  display_options:
+    - 'date'
+
+- platform: template
+  sensors:
+    odpad:
+      value_template: >
+        {% set t = now() %}
+        {% set midnight = today_at() %}
+        {% set event = state_attr('calendar.odpadky', 'start_time') | as_datetime | as_local %}
+        {% set delta = event - midnight %}
+        {% if delta.days == 0 %}
+          Dnes
+        {% elif delta.days == 1 %}
+          Zítra
+        {% elif delta.days == 2 %}
+          Pozítří
+        {% elif delta.days == 3 or delta.days == 4  %}
+          Za {{ delta.days }} dny
+        {% else %}
+          Za {{ delta.days }} dní
+        {% endif %}
+      friendly_name: "Odpadky"
+      
+    odpad_typ: 
+      value_template: "{{ state_attr('calendar.odpadky', 'message') }}"
+      friendly_name: "Odpadky typ"

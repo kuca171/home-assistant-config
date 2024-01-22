@@ -1,0 +1,57 @@
+[
+  {
+    "name": "AP - doladit wifi dle zigbee",
+    "id": "237779d32a0b439ea2c339ae30118ce3",
+    "complete": false
+  },
+  {
+    "name": "Záloha Home Assistant",
+    "id": "292bce68b76e473e98830fddecaf4722",
+    "complete": false
+  },
+  {
+    "name": "Dokumentace Home Assistant",
+    "id": "0b50decb946c4c6e935d08b06ba9fb2b",
+    "complete": false
+  },
+  {
+    "name": "esphome proxy - pračka",
+    "id": "7fe8fb402dff4c07972005b7cd6fc064",
+    "complete": false
+  },
+  {
+    "name": "dockery na git",
+    "id": "ccaeede9f4064e628f86473d1812d8d3",
+    "complete": false
+  },
+  {
+    "name": "FoxHome - dokončit",
+    "id": "a263408d38454a95b915f66eee44af36",
+    "complete": true
+  },
+  {
+    "name": "Kamera",
+    "id": "472b5ba12a144b1da5b2fa7c7235983b",
+    "complete": false
+  },
+  {
+    "name": "Influx",
+    "id": "a1b12bc1d156437f85ce6475d380a7ad",
+    "complete": false
+  },
+  {
+    "name": "strava docker",
+    "id": "0ac9c138a82545a4a96b15f6a4da52b3",
+    "complete": false
+  },
+  {
+    "name": "ESP-HOME nahradit foxhome",
+    "id": "b0c745b05f934102acd5e3278e9b12c3",
+    "complete": true
+  },
+  {
+    "name": "zásuvka zkusit rozebrat možný flash esphome",
+    "id": "e83aff4e97924b098b013ed1917a60b3",
+    "complete": true
+  }
+]
