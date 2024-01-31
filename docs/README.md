@@ -1,5 +1,5 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2024.1.2%20-green)](https://github.com/home-assistant/core/releases/tag/2024.1.2)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2024.1.6%20-green)](https://github.com/home-assistant/core/releases/tag/2024.1.6)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 ![alt tag](img/mydashboard.png)
@@ -18,11 +18,16 @@ Dokumentace pro mé konfigurační soubory [Home Assistant](https://home-assista
 
 # Historie
 
-Popsat začátky pokusů s arduinem, esp32/8266... node-red až po home assistant.
+Před tím, než jsem se dostal k Home Assistant jsem prováděl pokusy s arduinem a ESP32. Původně nasazení bylo na Orange PI s mosquittem a přes Node-Red dashboard se zobrazovaly data z čidel.
 
-home assistant - docker supervisor
-home assistant os
-home assistant docker core
+Po půl roce pokusů následoval přesun na Raspberry PI 4B 2GB. Na kterém už běžel Home Assistant. Home Assistant byl nainstalován v docker supervised verzi a na té mi Home Assistant zhruba rok úspěšně běžel. Integrovaných bylo jen pár tuya žárovek a pak ESP32 + BME/BMP280. Po několika měsících byla provedena migrace z SD karty na SSD.
+
+Po roce testování docker supervised instalace Home Asisstant byla provedena nová instalace. Přechod na Home Assistant OS. 
+Pro moji konfiguraci R-pi se toto nasazení přímo Home Assistan OS setkalo s navýšením prostředků Home Assistant na R-pi, to byl jeden z důvodů proč jsem začal po cca 2 měsících přemýšlet nad Home Assistant Core.
+
+Home Assistant Core, tj. docker verzi bez supervisora provozuji rok a půl bez nejmenších problémů. Od tuya zařízení jsem časem utekl, kde to jen šlo (žárovky flashnuty na esphome, stejně tak i zásuvková lišta). Proběhlo rozšíření R-pi o Home Assistant Sky connect a pořízení Zigbee zařízení (žárovky), připojené do Home Assistant přes Zigbee2MQTT.
+
+Do budoucna plánuji přechod na miniPC a se stěhováním související úpravy sítě (ubiquity), zařízení (co půjde na zigbee). Příští nasazení proto bude PROXMOX a VM s HassOS.
 
 # Architektura
 

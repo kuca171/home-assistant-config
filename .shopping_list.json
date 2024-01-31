@@ -1,8 +1,13 @@
 [
   {
-    "name": "AP - doladit wifi dle zigbee",
-    "id": "237779d32a0b439ea2c339ae30118ce3",
+    "name": "espHome - synchronizovat zařízení",
+    "id": "e7db896789444b4ba3bd0b40094eac98",
     "complete": false
+  },
+  {
+    "name": "Záloha esphome",
+    "id": "be22f076e4344b82951b2375bad8dec2",
+    "complete": true
   },
   {
     "name": "Záloha Home Assistant",
@@ -42,6 +47,11 @@
   {
     "name": "strava docker",
     "id": "0ac9c138a82545a4a96b15f6a4da52b3",
+    "complete": false
+  },
+  {
+    "name": "AP - doladit wifi dle zigbee",
+    "id": "237779d32a0b439ea2c339ae30118ce3",
     "complete": false
   },
   {
