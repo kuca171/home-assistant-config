@@ -18,15 +18,20 @@ Dokumentace pro mé konfigurační soubory [Home Assistant](https://home-assista
 
 # Historie
 
+## 2020
 Před tím, než jsem se dostal k Home Assistant jsem prováděl pokusy s arduinem a ESP32. Původně nasazení bylo na Orange PI s mosquittem a přes Node-Red dashboard se zobrazovaly data z čidel.
 
+## 2021
 Po půl roce pokusů následoval přesun na Raspberry PI 4B 2GB. Na kterém už běžel Home Assistant. Home Assistant byl nainstalován v docker supervised verzi a na té mi Home Assistant zhruba rok úspěšně běžel. Integrovaných bylo jen pár tuya žárovek a pak ESP32 + BME/BMP280. Po několika měsících byla provedena migrace z SD karty na SSD.
 
+## 2022
 Po roce testování docker supervised instalace Home Asisstant byla provedena nová instalace. Přechod na Home Assistant OS. 
 Pro moji konfiguraci R-pi se toto nasazení přímo Home Assistan OS setkalo s navýšením prostředků Home Assistant na R-pi, to byl jeden z důvodů proč jsem začal po cca 2 měsících přemýšlet nad Home Assistant Core.
 
+## 2023
 Home Assistant Core, tj. docker verzi bez supervisora provozuji rok a půl bez nejmenších problémů. Od tuya zařízení jsem časem utekl, kde to jen šlo (žárovky flashnuty na esphome, stejně tak i zásuvková lišta). Proběhlo rozšíření R-pi o Home Assistant Sky connect a pořízení Zigbee zařízení (žárovky), připojené do Home Assistant přes Zigbee2MQTT.
 
+## 202X
 Do budoucna plánuji přechod na miniPC a se stěhováním související úpravy sítě (ubiquity), zařízení (co půjde na zigbee). Příští nasazení proto bude PROXMOX a VM s HassOS.
 
 # Architektura
