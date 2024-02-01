@@ -253,7 +253,9 @@ Použité integrace a témata vzhledu z [HACS](https://hacs.xyz/):
 
 # Printscreeny dashboardu
 
-nadpis mluví za vše
+![alt tag](img/mydashboard.png)
+
+![alt tag](img/mydashboard2.png)
 
 # Odkazy na mé další projekty
 
