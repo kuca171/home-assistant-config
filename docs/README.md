@@ -36,6 +36,15 @@ Do budoucna plánuji přechod na miniPC a se stěhováním související úpravy
 
 # Architektura
 
+
+Ubiquity Unifi AP pro
+R-pi
+  - docker
+  - hassio core
+  - mosquitto mqtt broker
+  - z2m
+  - esphome
+
 popsat architekturu sítě od routeru, přes wifi... 
 dál načrtnout technologie esphome, zigbee, z2m, mqtt...
 
