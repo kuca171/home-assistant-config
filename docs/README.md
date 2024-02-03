@@ -32,21 +32,20 @@ Pro moji konfiguraci R-pi se toto nasazení přímo Home Assistan OS setkalo s n
 Home Assistant Core, tj. docker verzi bez supervisora provozuji rok a půl bez nejmenších problémů. Od tuya zařízení jsem časem utekl, kde to jen šlo (žárovky flashnuty na esphome, stejně tak i zásuvková lišta). Proběhlo rozšíření R-pi o Home Assistant Sky connect a pořízení Zigbee zařízení (žárovky), připojené do Home Assistant přes Zigbee2MQTT.
 
 ## 202X
-Do budoucna plánuji přechod na miniPC a se stěhováním související úpravy sítě (ubiquity), zařízení (co půjde na zigbee). Příští nasazení proto bude PROXMOX a VM s HassOS.
+Do budoucna plánuji přechod na miniPC a se stěhováním související úpravy sítě (ubiquity) a pořízení nových zařízení (co půjde na zigbee). Příští nasazení proto bude PROXMOX a VM s HassOS.
 
 # Architektura
 
 
-Ubiquity Unifi AP pro
-R-pi
+- Ubiquity Unifi UAP-AC-PRO
+
+- R-pi
   - docker
   - hassio core
   - mosquitto mqtt broker
   - z2m
   - esphome
 
-popsat architekturu sítě od routeru, přes wifi... 
-dál načrtnout technologie esphome, zigbee, z2m, mqtt...
 
 udělat na to nákresy/modely
 
