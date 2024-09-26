@@ -4,6 +4,36 @@
         "step": {
             "user": {
                 "title": "Skonfiguruj swoje urządzenie Tuya Local",
+                "description": "Urządzenia można dodawać ręcznie lub przy pomocy chmury za pomocą aplikacji Smart Life.",
+                "data": {
+                    "setup_mode": "Wybór konfiguracji:"
+                }
+            },
+            "cloud": {
+                "title": "Zaloguj się do Tuyi",
+                "description": "Wprowadź swój kod użytkownika Smart Life lub Tuya Smart.\n\nKod ten znajdziesz w aplikacji Smart Life lub Tuya Smart na ekranie **Ustawienia** > **Konto i bezpieczeństwo** i wprowadź kod widoczny na ekranie ",
+                "data": {
+                    "user_code": "Kod użytkownika:"
+                }
+            },
+            "scan": {
+                "title": "Dokończ logowanie",
+                "description": "Użyj aplikacji Smart Life lub aplikacji Tuya Smart"
+            },
+            "choose_device": {
+                "title": "Wybierz urządzenie",
+                "description": "Wybierz urządzenie do dodania z pierwszej listy rozwijanej. ",
+                "data": {
+                    "device_id": "Wybierz urządzenie:",
+                    "hub_id": "Wybierz bramkę:"
+                }
+            },
+            "search": {
+                "title": "Znajdź adres IP urządzenia",
+                "description": "Chmura Tuya nie udostępnia lokalnych adresów IP"
+            },
+            "local": {
+                "title": "Skonfiguruj swoje urządzenie Tuya Local",
                 "description": "[Postępuj zgodnie z instrukcjami by znaleźć swoje Device ID oraz Local key.](https://github.com/make-all/tuya-local#finding-your-device-id-and-local-key)",
                 "data": {
                     "host": "Adres IP lub nazwa hosta",
@@ -23,7 +53,7 @@
             },
             "choose_entities": {
                 "title": "Szczegóły urządzenia",
-                "description": "Wybierz nazwę dla urządzenia, oraz które jednostki będą dostępne",
+                "description": "Wybierz nazwę dla urządzenia",
                 "data": {
                     "name": "Nazwa"
                 }
@@ -31,10 +61,21 @@
         },
         "abort": {
             "already_configured": "Urządzenie z takim ID już istnieje.",
-            "not_supported": "Przepraszam, to urządzenie nie jest wspierane."
+            "not_supported": "Przepraszam, to urządzenie nie jest wspierane.",
+            "no_devices": "Nie udało się znaleźć żadnych niezarejestrowanych urządzeń dla konta."
         },
         "error": {
-            "connection": "Nie można podłączyć się do urządzenia z tymi danymi. To może być tymczasowy problem lub dane mogą być niewłaściwe."
+            "connection": "Nie można podłączyć się do urządzenia z tymi danymi. To może być tymczasowy problem lub dane mogą być niewłaściwe.",
+            "does_not_need_hub": "Urządzenie nie potrzebuje bramy i taką wybrano. ",
+            "needs_hub": "Urządzenie wymaga bramy"
+        }
+    },
+    "selector": {
+        "setup_mode": {
+            "options": {
+                "cloud": "Konfiguracja urządzenia Smart Life wspomagana chmurą.",
+                "manual": "Ręcznie podaj informacje o połączeniu urządzenia."
+            }
         }
     },
     "options": {
@@ -59,6 +100,29 @@
         }
     },
     "entity": {
+        "binary_sensor": {
+            "defrost": {
+                "name": "Rozmrażać",
+                "state": {
+                    "off": "Naladowana",
+                    "on": "Rozmrażanie"
+                }
+            },
+            "tank_empty": {
+                "name": "Zbiornik",
+                "state": {
+                    "off": "OK",
+                    "on": "Niski"
+                }
+            },
+            "tank_full": {
+                "name": "Zbiornik",
+                "state": {
+                    "off": "OK",
+                    "on": "Pełny"
+                }
+            }
+        },
         "climate": {
             "aircon_extra": {
                 "state_attributes": {
@@ -140,6 +204,9 @@
                     }
                 }
             },
+            "heater": {
+                "name": "Podgrzewacz"
+            },
             "thermo_switch": {
                 "state_attributes": {
                     "hvac_mode": {
@@ -163,23 +230,39 @@
             }
         },
         "fan": {
+            "aroma_diffuser": {
+                "name": "Rozpylacz zapachów",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "low": "Niski",
+                            "medium": "Średni",
+                            "high": "Wysoki",
+                            "continuous": "Ciągły",
+                            "intermittent": "Przerywany"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
-                            "normal": "Normalny",
+                            "normal": "Naladowana",
                             "nature": "Naturalny",
                             "sleep": "Uśpiony",
                             "baby": "Dziecko",
                             "fresh": "Świeży",
                             "smart": "Inteligentny",
                             "strong": "Silny",
+                            "displayoff": "Wyświetlacz wyłączony",
                             "off": "Wyłączony"
                         }
                     }
                 }
             },
             "ventilation": {
+                "name": "Wentylacja",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
@@ -192,6 +275,116 @@
                         }
                     }
                 }
+            }
+        },
+        "light": {
+            "backlight": {
+                "name": "Podświetlenie"
+            },
+            "display": {
+                "name": "Wyświetlacz"
+            },
+            "embers": {
+                "name": "Żar"
+            },
+            "flame": {
+                "name": "Płomień"
+            },
+            "indicator": {
+                "name": "Wskaźnik"
+            },
+            "laser": {
+                "name": "Laser"
+            },
+            "logs": {
+                "name": "Kłoda"
+            },
+            "nightlight": {
+                "name": "Nocne światło"
+            }
+        },
+        "lock": {
+            "child_lock": {
+                "name": "Zabezpieczenie przed dziećmi"
+            }
+        },
+        "number": {
+            "timer": {
+                "name": "Regulator czasowy"
+            }
+        },
+        "select": {
+            "timer": {
+                "name": "Regulator czasowy",
+                "state": {
+                    "cancel": "Anuluj",
+                    "30m": "30 minut",
+                    "1h": "1 godzina",
+                    "1h30m": "1 godzina 30 minut",
+                    "2h": "2 godziny",
+                    "2h30m": "2 godziny 30 minut",
+                    "3h": "3 godziny",
+                    "3h30m": "3 godziny 30 minut",
+                    "4h": "4 godziny",
+                    "4h30m": "4 godziny 30 minut",
+                    "5h": "5 godzin",
+                    "5h30m": "5 godzin 30 minut",
+                    "6h": "6 godzin",
+                    "6h30m": "6 godzin 30 minut",
+                    "7h": "7 godzin",
+                    "7h30m": "7 godzin 30 minut",
+                    "8h": "8 godzin",
+                    "8h30m": "8 godzin 30 minut",
+                    "9h": "9 godzin",
+                    "9h30m": "9 godzin 30 minut",
+                    "10h": "10 godzin",
+                    "11h": "11 godzin",
+                    "12h": "12 godzin",
+                    "13h": "13 godzin",
+                    "14h": "14 godzin",
+                    "15h": "15 godzin",
+                    "16h": "16 godzin",
+                    "17h": "17 godzin",
+                    "18h": "18 godzin",
+                    "19h": "19 godzin",
+                    "20h": "20 godzin",
+                    "21h": "21 godzin",
+                    "22h": "22 godziny",
+                    "23h": "23 godziny",
+                    "24h": "24 godziny",
+                    "36h": "36 godzin",
+                    "48h": "48 godzin",
+                    "72h": "72 godziny"
+                }
+            },
+            "temperature_unit": {
+                "name": "Jednostka temperatury",
+                "state": {
+                    "celsius": "Celsjusz",
+                    "fahrenheit": "Fahrenheita"
+                }
+            }
+        },
+        "sensor": {
+            "time_remaining": {
+                "name": "Pozostały czas"
+            }
+        },
+        "switch": {
+            "anti_frost": {
+                "name": "Ochrona przed zamarzaniem"
+            },
+            "evaporator_cleaning": {
+                "name": "Czyszczenie parownika"
+            },
+            "ionizer": {
+                "name": "Jonizator"
+            },
+            "keytone": {
+                "name": "Dzwięk klawiszy"
+            },
+            "uv_sterilization": {
+                "name": "Sterylizacja UV"
             }
         }
     }

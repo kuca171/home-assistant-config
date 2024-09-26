@@ -94,7 +94,6 @@ secondary_entities:
     name: Clear energy
     class: restart
     category: config
-    hidden: true
     dps:
       - id: 16
         type: boolean
@@ -122,6 +121,7 @@ secondary_entities:
                   max: 16
       - id: 114
         type: integer
+        optional: true
         name: value_alt
         unit: A
         range:
@@ -147,6 +147,10 @@ secondary_entities:
         range:
           min: 0
           max: 15
+      - id: 121
+        type: string
+        optional: true
+        name: display
   - entity: sensor
     class: energy
     dps:
@@ -154,7 +158,7 @@ secondary_entities:
         type: integer
         name: sensor
         unit: kWh
-        class: measurement
+        class: total_increasing
         mapping:
           - scale: 10
   - entity: sensor
@@ -179,6 +183,8 @@ secondary_entities:
         name: sensor
         unit: V
         class: measurement
+        mapping:
+          - scale: 10
   - entity: sensor
     name: Voltage L3
     class: voltage
@@ -189,6 +195,8 @@ secondary_entities:
         name: sensor
         unit: V
         class: measurement
+        mapping:
+          - scale: 10
   - entity: sensor
     name: Current L1
     class: current
@@ -258,6 +266,14 @@ secondary_entities:
         range:
           min: 0
           max: 15
+      - id: 120
+        type: string
+        optional: true
+        name: session_duration
+      - id: 122
+        type: string
+        optional: true
+        name: display
   - entity: select
     name: Toggle charging
     icon: "mdi:ev-plug-type2"

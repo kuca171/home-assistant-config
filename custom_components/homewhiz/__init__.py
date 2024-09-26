@@ -1,3 +1,4 @@
+import asyncio
 import logging
 
 from dacite import from_dict
@@ -9,6 +10,7 @@ from homeassistant.components.bluetooth import (
     async_register_callback,
 )
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import EVENT_HOMEASSISTANT_STOP
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.requirements import RequirementsNotFound
 from homeassistant.util.package import install_package, is_installed
@@ -41,6 +43,9 @@ async def setup_bluetooth(
 ) -> bool:
     _LOGGER.info("Setting up bluetooth connection")
 
+    if not entry.unique_id:
+        return False
+
     coordinator = hass.data.setdefault(DOMAIN, {})[
         entry.entry_id
     ] = HomewhizBluetoothUpdateCoordinator(hass, entry.unique_id)
@@ -61,6 +66,15 @@ async def setup_bluetooth(
             BluetoothScanningMode.ACTIVE,
         )
     )
+
+    # Set up listening to shutdown event
+    def disconnect_service(_event) -> None:  # type: ignore
+        _LOGGER.debug("Received shutdown event and triggering kill")
+        hass.create_task(coordinator.kill())
+
+    _LOGGER.debug("Setting up shutdown event listener")
+    hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STOP, disconnect_service)
+
     return True
 
 
@@ -73,7 +87,10 @@ def _lazy_install_awsiotsdk() -> None:
 
 async def setup_cloud(entry: ConfigEntry, hass: HomeAssistant) -> bool:
     _LOGGER.info("Setting up cloud connection")
-    _lazy_install_awsiotsdk()
+
+    loop = asyncio.get_event_loop()
+    lazy_install_awsiotsdk_task = loop.run_in_executor(None, _lazy_install_awsiotsdk)
+    await lazy_install_awsiotsdk_task
 
     ids = from_dict(IdExchangeResponse, entry.data["ids"])
     cloud_config = from_dict(CloudConfig, entry.data["cloud_config"])
@@ -81,7 +98,8 @@ async def setup_cloud(entry: ConfigEntry, hass: HomeAssistant) -> bool:
         entry.entry_id
     ] = HomewhizCloudUpdateCoordinator(hass, ids.appId, cloud_config, entry)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
-    hass.async_create_task(coordinator.connect())
+    entry.async_create_task(hass, coordinator.connect())
+    _LOGGER.info("Setup cloud connection successfully")
     return True
 
 

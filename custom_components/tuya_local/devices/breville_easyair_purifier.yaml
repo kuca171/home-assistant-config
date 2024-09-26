@@ -39,6 +39,7 @@ secondary_entities:
         type: boolean
   - entity: sensor
     name: Filter days left
+    class: duration
     category: diagnostic
     icon: "mdi:air-filter"
     dps:
@@ -47,8 +48,7 @@ secondary_entities:
         type: integer
         unit: d
   - entity: select
-    name: Timer
-    icon: "mdi:fan-clock"
+    translation_key: timer
     category: config
     dps:
       - id: 19
@@ -56,18 +56,17 @@ secondary_entities:
         name: option
         mapping:
           - dps_val: "cancle"
-            value: "Cancel"
+            value: cancel
           - dps_val: "2"
-            value: "2 hour"
+            value: "2h"
           - dps_val: "4"
-            value: "4 hours"
+            value: "4h"
           - dps_val: "8"
-            value: "8 hours"
+            value: "8h"
   - entity: sensor
-    name: Time left
+    translation_key: time_remaining
     category: diagnostic
     class: duration
-    icon: "mdi:timer"
     dps:
       - id: 20
         name: sensor

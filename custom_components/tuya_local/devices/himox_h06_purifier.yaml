@@ -41,8 +41,7 @@ secondary_entities:
         type: boolean
         name: button
   - entity: select
-    name: Timer
-    icon: "mdi:timer"
+    translation_key: timer
     category: config
     dps:
       - id: 18
@@ -50,14 +49,13 @@ secondary_entities:
         type: string
         mapping:
           - dps_val: cancel
-            value: "Off"
+            value: cancel
           - dps_val: 4h
-            value: "4 hours"
+            value: "4h"
           - dps_val: 8h
-            value: "8 hours"
+            value: "8h"
   - entity: sensor
-    name: Timer
-    icon: "mdi:timer"
+    translation_key: time_remaining
     category: diagnostic
     class: duration
     dps:

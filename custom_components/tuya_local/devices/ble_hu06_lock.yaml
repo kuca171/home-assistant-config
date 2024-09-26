@@ -150,20 +150,6 @@ secondary_entities:
             value: ring
           - dps_val: false
             value: null
-  - entity: binary_sensor
-    name: Doorbell
-    deprecated: event_doorbell
-    class: sound
-    category: diagnostic
-    dps:
-      - id: 24
-        type: boolean
-        name: sensor
-        optional: true
-        persist: false
-        mapping:
-          - dps_val: null
-            value: false
   - entity: number
     name: Doorbell volume
     category: config
@@ -201,9 +187,9 @@ secondary_entities:
         range:
           min: 10
           max: 180
-          mapping:
-            - step: 10
-          unit: s
+        mapping:
+          - step: 10
+        unit: s
   - entity: binary_sensor
     class: door
     category: diagnostic

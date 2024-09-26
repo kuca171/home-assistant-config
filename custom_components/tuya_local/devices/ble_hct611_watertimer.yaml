@@ -3,12 +3,12 @@ products:
   - id: tqzkwarw
     name: HCT-611
 primary_entity:
-  entity: switch
-  icon: "mdi:pipe-valve"
+  entity: valve
+  class: water
   dps:
     - id: 1
       type: boolean
-      name: switch
+      name: valve
     - id: 12
       type: string
       name: state
@@ -49,6 +49,14 @@ primary_entity:
       name: program_8
       optional: true
 secondary_entities:
+  - entity: switch
+    icon: "mdi:pipe-valve"
+    deprecated: valve
+    category: config
+    dps:
+      - id: 1
+        type: boolean
+        name: switch
   - entity: sensor
     class: battery
     category: diagnostic
@@ -64,6 +72,7 @@ secondary_entities:
         name: state
   - entity: select
     name: Weather delay
+    translation_key: timer
     icon: "mdi:weather-cloudy-clock"
     category: config
     dps:
@@ -73,20 +82,19 @@ secondary_entities:
         optional: true
         mapping:
           - dps_val: cancel
-            value: "Off"
+            value: cancel
           - dps_val: "24h"
-            value: "1 day"
+            value: "24h"
           - dps_val: "48h"
-            value: "2 days"
+            value: "48h"
           - dps_val: "72h"
-            value: "3 days"
+            value: "72h"
           - dps_val: null
             value: "not set"
             hidden: true
   - entity: number
-    name: Timer
+    translation_key: timer
     category: config
-    icon: "mdi:timer"
     dps:
       - id: 11
         type: integer

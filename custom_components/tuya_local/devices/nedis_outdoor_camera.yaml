@@ -8,6 +8,8 @@ primary_entity:
     - id: 115
       name: snapshot
       type: base64
+      optional: true
+      sensitive: true
     - id: 134
       name: motion_enable
       type: boolean
@@ -26,9 +28,8 @@ primary_entity:
           hidden: true
 secondary_entities:
   - entity: light
-    name: Indicator
+    translation_key: indicator
     category: config
-    icon: "mdi:led-on"
     dps:
       - id: 101
         type: boolean
@@ -236,6 +237,10 @@ secondary_entities:
       - id: 254
         type: string
         name: ip_address
+        sensitive: true
+        optional: true
       - id: 253
         type: string
         name: password_change
+        sensitive: true
+        optional: true

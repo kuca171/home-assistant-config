@@ -52,12 +52,12 @@
   {
     "name": "strava docker",
     "id": "0ac9c138a82545a4a96b15f6a4da52b3",
-    "complete": false
+    "complete": true
   },
   {
     "name": "AP - doladit wifi dle zigbee",
     "id": "237779d32a0b439ea2c339ae30118ce3",
-    "complete": false
+    "complete": true
   },
   {
     "name": "ESP-HOME nahradit foxhome",

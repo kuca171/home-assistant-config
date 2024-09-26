@@ -4,6 +4,36 @@
         "step": {
             "user": {
                 "title": "Konfigurer din lokale Tuya enhet",
+                "description": "Enheter kan enten legges til manuelt eller skyassistert ved hjelp av Smart Life-appen.",
+                "data": {
+                    "setup_mode": "Oppsettvalg:"
+                }
+            },
+            "cloud": {
+                "title": "Logg inn på Tuya",
+                "description": "Skriv inn Smart Life- eller Tuya Smart-brukerkoden din.\n\nDu finner denne koden i Smart Life-appen eller Tuya Smart-appen i **Innstillinger** > **Konto og sikkerhet**-skjermbildet",
+                "data": {
+                    "user_code": "Brukerkode:"
+                }
+            },
+            "scan": {
+                "title": "Fullfør påloggingen",
+                "description": "Bruk Smart Life-appen eller Tuya Smart-appen for å skanne følgende QR-kode for å fullføre påloggingen.\n\nFortsett til neste trinn når du har fullført dette trinnet i appen."
+            },
+            "choose_device": {
+                "title": "Velg enheten du vil legge til",
+                "description": "Velg enheten du vil legge til fra den første rullegardinlisten. ",
+                "data": {
+                    "device_id": "Velg enhet:",
+                    "hub_id": "Velg gateway:"
+                }
+            },
+            "search": {
+                "title": "Finn enhetens IP-adresse",
+                "description": "Tuya cloud gir ikke lokale IP-adresser"
+            },
+            "local": {
+                "title": "Konfigurer din lokale Tuya enhet",
                 "description": "[Følg instruksjonene her for å finne enhets-id og den lokale nøkkelen.](https://github.com/make-all/tuya-local#finding-your-device-id-and-local-key)",
                 "data": {
                     "host": "IP addresse eller vertsnavn",
@@ -23,7 +53,7 @@
             },
             "choose_entities": {
                 "title": "Enhetsdetaljer",
-                "description": "Angi et navn for din enhet, og hvilke entiteter som skal aktiveres",
+                "description": "Angi et navn for din enhet",
                 "data": {
                     "name": "Navn"
                 }
@@ -31,10 +61,21 @@
         },
         "abort": {
             "already_configured": "En enhet med denne ID-en eksisterer allerede.",
-            "not_supported": "Beklager, det er ingen støtte for denne enheten."
+            "not_supported": "Beklager, det er ingen støtte for denne enheten.",
+            "no_devices": "Kan ikke finne noen uregistrerte enheter for kontoen."
         },
         "error": {
-            "connection": "Kunne ikke koble til enheten med de angitte detaljene. Det kan være en midlertidig feil, eller feil med detaljene angitt."
+            "connection": "Kunne ikke koble til enheten med de angitte detaljene. Det kan være en midlertidig feil, eller feil med detaljene angitt.",
+            "does_not_need_hub": "Enheten trenger ikke en gateway",
+            "needs_hub": "Enheten trenger en gateway"
+        }
+    },
+    "selector": {
+        "setup_mode": {
+            "options": {
+                "cloud": "Smart Life sky-assistert enhetsoppsett.",
+                "manual": "Oppgi informasjon om enhetstilkobling manuelt."
+            }
         }
     },
     "options": {
@@ -59,6 +100,29 @@
         }
     },
     "entity": {
+        "binary_sensor": {
+            "defrost": {
+                "name": "Tine",
+                "state": {
+                    "off": "Normal",
+                    "on": "Tining"
+                }
+            },
+            "tank_empty": {
+                "name": "Tank",
+                "state": {
+                    "off": "OK",
+                    "on": "Lav"
+                }
+            },
+            "tank_full": {
+                "name": "Tank",
+                "state": {
+                    "off": "OK",
+                    "on": "Full"
+                }
+            }
+        },
         "climate": {
             "aircon_extra": {
                 "state_attributes": {
@@ -140,6 +204,9 @@
                     }
                 }
             },
+            "heater": {
+                "name": "Varmeapparat"
+            },
             "thermo_switch": {
                 "state_attributes": {
                     "hvac_mode": {
@@ -163,6 +230,20 @@
             }
         },
         "fan": {
+            "aroma_diffuser": {
+                "name": "Aroma diffuser",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "low": "Lav",
+                            "medium": "Medium",
+                            "high": "Høy",
+                            "continuous": "Kontinuerlig",
+                            "intermittent": "Intermitterende"
+                        }
+                    }
+                }
+            },
             "fan_with_presets": {
                 "state_attributes": {
                     "preset_mode": {
@@ -170,13 +251,140 @@
                             "normal": "Normal",
                             "nature": "Nøytral",
                             "sleep": "Søvn",
+                            "baby": "Baby",
                             "fresh": "Fresh",
                             "smart": "Smart",
                             "strong": "Sterk",
+                            "displayoff": "Skjerm av",
                             "off": "Av"
                         }
                     }
                 }
+            },
+            "ventilation": {
+                "name": "Ventilasjon",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "fresh": "Frisk luft",
+                            "circulate": "Sirkulere",
+                            "sleep": "Sove",
+                            "auto": "Auto",
+                            "eco": "Øko",
+                            "anti-condensation": "Anti-kondens"
+                        }
+                    }
+                }
+            }
+        },
+        "light": {
+            "backlight": {
+                "name": "Bakgrunnsbelysning"
+            },
+            "display": {
+                "name": "Skjerm"
+            },
+            "embers": {
+                "name": "Glør"
+            },
+            "flame": {
+                "name": "Flamme"
+            },
+            "indicator": {
+                "name": "Indikator"
+            },
+            "laser": {
+                "name": "Laser"
+            },
+            "logs": {
+                "name": "Tømmerstokk"
+            },
+            "nightlight": {
+                "name": "Nattlys"
+            }
+        },
+        "lock": {
+            "child_lock": {
+                "name": "Barnesikring"
+            }
+        },
+        "number": {
+            "timer": {
+                "name": "Timer"
+            }
+        },
+        "select": {
+            "timer": {
+                "name": "Timer",
+                "state": {
+                    "cancel": "Avbryt",
+                    "30m": "30 minutter",
+                    "1h": "1 time",
+                    "1h30m": "1 time 30 minutter",
+                    "2h": "2 timer",
+                    "2h30m": "2 timer 30 minutter",
+                    "3h": "3 timer",
+                    "3h30m": "3 timer 30 minutter",
+                    "4h": "4 timer",
+                    "4h30m": "4 timer 30 minutter",
+                    "5h": "5 timer",
+                    "5h30m": "5 timer 30 minutter",
+                    "6h": "6 timer",
+                    "6h30m": "6 timer 30 minutter",
+                    "7h": "7 timer",
+                    "7h30m": "7 timer 30 minutter",
+                    "8h": "8 timer",
+                    "8h30m": "8 timer 30 minutter",
+                    "9h": "9 timer",
+                    "9h30m": "9 timer 30 minutter",
+                    "10h": "10 timer",
+                    "11h": "11 timer",
+                    "12h": "12 timer",
+                    "13h": "13 timer",
+                    "14h": "14 timer",
+                    "15h": "15 timer",
+                    "16h": "16 timer",
+                    "17h": "17 timer",
+                    "18h": "18 timer",
+                    "19h": "19 timer",
+                    "20h": "20 timer",
+                    "21h": "21 timer",
+                    "22h": "22 timer",
+                    "23h": "23 timer",
+                    "24h": "24 timer",
+                    "36h": "36 timer",
+                    "48h": "48 timer",
+                    "72h": "72 timer"
+                }
+            },
+            "temperature_unit": {
+                "name": "Temperaturenhet",
+                "state": {
+                    "celsius": "Celsius",
+                    "fahrenheit": "Fahrenheit"
+                }
+            }
+        },
+        "sensor": {
+            "time_remaining": {
+                "name": "Gjenstående tid"
+            }
+        },
+        "switch": {
+            "anti_frost": {
+                "name": "Anti-frost"
+            },
+            "evaporator_cleaning": {
+                "name": "Rengjøring av fordamper"
+            },
+            "ionizer": {
+                "name": "Ionisator"
+            },
+            "keytone" : {
+                "name": "Tastaturtone"
+            },
+            "uv_sterilization": {
+                "name": "UV-sterilisering"
             }
         }
     }

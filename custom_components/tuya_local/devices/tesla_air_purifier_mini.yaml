@@ -1,9 +1,10 @@
 name: Tesla smart air purifier mini
 products:
   - id: sgodozglgymucvq2
+    name: Tesla Air Mini
 primary_entity:
   entity: fan
-  translation_key: fan_with_presets
+  translation_only_key: fan_with_presets
   dps:
     - id: 1
       type: boolean
@@ -28,9 +29,8 @@ secondary_entities:
         name: switch
         type: boolean
   - entity: switch
-    name: Ionizer
+    translation_key: ionizer
     category: config
-    icon: "mdi:dots-hexagon"
     dps:
       - id: 6
         name: switch
@@ -45,19 +45,18 @@ secondary_entities:
         name: sensor
         unit: "%"
   - entity: select
-    name: Timer
-    icon: "mdi:timer"
+    translation_key: timer
     category: config
     dps:
       - id: 18
         type: string
         name: option
         mapping:
-          - dps_val: "cancel"
-            value: "cancel"
+          - dps_val: cancel
+            value: cancel
           - dps_val: "1h"
-            value: "1 hour"
+            value: "1h"
           - dps_val: "2h"
-            value: "2 hours"
+            value: "2h"
           - dps_val: "4h"
-            value: "4 hours"
+            value: "4h"
