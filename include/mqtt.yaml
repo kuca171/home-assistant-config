@@ -1,7 +1,7 @@
 sensor:
   - name: "Teplota"
     state_topic: "meteo-zahrada/sensors"
-    suggested_display_precision: 1
+    suggested_display_precision: 2
     unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
     device:
@@ -12,6 +12,7 @@ sensor:
     device_class: temperature
   - name: "Vlhkost"
     state_topic: "meteo-zahrada/sensors"
+    suggested_display_precision: 1
     unit_of_measurement: "%"
     value_template: "{{ value_json.humidity }}"
     device:
