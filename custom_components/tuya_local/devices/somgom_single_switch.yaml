@@ -1,18 +1,19 @@
 name: Wall switch
 products:
   - id: nqodepctqralr6su
-    name: Novadigital switch
+    manufacturer: Novadigital
   - id: vxo9yezswiumvync
-    name: PST WT-E1
-primary_entity:
-  entity: switch
-  dps:
-    - id: 1
-      name: switch
-      type: boolean
-secondary_entities:
+    manufacturer: PST
+    model: WT-E1
+entities:
+  - entity: switch
+    dps:
+      - id: 1
+        name: switch
+        type: boolean
   - entity: number
     translation_key: timer
+    class: duration
     category: config
     dps:
       - id: 7
@@ -25,8 +26,7 @@ secondary_entities:
           - scale: 60
         unit: min
   - entity: select
-    name: Initial state
-    icon: "mdi:toggle-switch"
+    translation_key: initial_state
     category: config
     dps:
       - id: 14
@@ -38,28 +38,28 @@ secondary_entities:
               - dps_val: ["0", "1", "2"]
                 mapping:
                   - dps_val: "0"
-                    value: "Off"
+                    value: "off"
                   - dps_val: "1"
-                    value: "On"
+                    value: "on"
                   - dps_val: "2"
-                    value: Last state
+                    value: memory
               - dps_val: ["memory", "off", "on"]
                 mapping:
                   - dps_val: "off"
-                    value: "Off"
+                    value: "off"
                   - dps_val: "on"
-                    value: "On"
+                    value: "on"
                   - dps_val: memory
-                    value: Last state
+                    value: memory
               # during startup there may be no value, but we need the options
               - dps_val: null
                 mapping:
                   - dps_val: "off"
-                    value: "Off"
+                    value: "off"
                   - dps_val: "on"
-                    value: "On"
+                    value: "on"
                   - dps_val: memory
-                    value: "Last state"
+                    value: memory
   - entity: light
     translation_key: backlight
     category: config

@@ -31,20 +31,7 @@
     title: Odvlhčovač
     message: Plná nádrž
   mode: single
-- id: '1695126213216'
-  alias: Odvlhčovač - ranní spuštění
-  description: Spuštění odvlhčovače každé ráno
-  trigger:
-  - platform: time
-    at: 07:00:00
-  condition: []
-  action:
-  - type: turn_on
-    device_id: d3b9adc81b4e1490dd7dd77083bccce6
-    entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
-    domain: humidifier
-  mode: single
-- id: '1695126309508'
+- id: '1731136443455'
   alias: Odvlhčovač - večerní vypnutí
   description: Vypnutí odvlhčovače každý večer
   trigger:
@@ -53,6 +40,19 @@
   condition: []
   action:
   - type: turn_off
+    device_id: d3b9adc81b4e1490dd7dd77083bccce6
+    entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
+    domain: humidifier
+  mode: single
+- id: '1731136488438'
+  alias: Odvlhčovač - ranní zapnutí
+  description: Spuštění odvlhčovače každé ráno
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition: []
+  action:
+  - type: turn_on
     device_id: d3b9adc81b4e1490dd7dd77083bccce6
     entity_id: 8a419ebfe705e7e0798d9717e3ba49b7
     domain: humidifier

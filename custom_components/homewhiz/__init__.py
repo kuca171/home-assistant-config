@@ -19,7 +19,7 @@ from .api import IdExchangeResponse
 from .bluetooth import HomewhizBluetoothUpdateCoordinator
 from .cloud import HomewhizCloudUpdateCoordinator
 from .config_flow import CloudConfig
-from .const import DOMAIN, PLATFORMS
+from .const import CONF_BT_RECONNECT_INTERVAL, DOMAIN, PLATFORMS
 
 _LOGGER: logging.Logger = logging.getLogger(__package__)
 
@@ -44,17 +44,21 @@ async def setup_bluetooth(
     _LOGGER.info("Setting up bluetooth connection")
 
     if not entry.unique_id:
+        _LOGGER.info("No unique entry id")
         return False
 
-    coordinator = hass.data.setdefault(DOMAIN, {})[
-        entry.entry_id
-    ] = HomewhizBluetoothUpdateCoordinator(hass, entry.unique_id)
+    coordinator = hass.data.setdefault(DOMAIN, {})[entry.entry_id] = (
+        HomewhizBluetoothUpdateCoordinator(
+            hass, entry.unique_id, entry.options.get(CONF_BT_RECONNECT_INTERVAL)
+        )
+    )
 
     @callback
     def connect(
         service_info: BluetoothServiceInfoBleak,
         change: BluetoothChange,
     ) -> None:
+        _LOGGER.debug("Called connect callback in setup_bluetooth")
         hass.async_create_task(coordinator.connect())
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
@@ -94,9 +98,9 @@ async def setup_cloud(entry: ConfigEntry, hass: HomeAssistant) -> bool:
 
     ids = from_dict(IdExchangeResponse, entry.data["ids"])
     cloud_config = from_dict(CloudConfig, entry.data["cloud_config"])
-    coordinator = hass.data.setdefault(DOMAIN, {})[
-        entry.entry_id
-    ] = HomewhizCloudUpdateCoordinator(hass, ids.appId, cloud_config, entry)
+    coordinator = hass.data.setdefault(DOMAIN, {})[entry.entry_id] = (
+        HomewhizCloudUpdateCoordinator(hass, ids.appId, cloud_config, entry)
+    )
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     entry.async_create_task(hass, coordinator.connect())
     _LOGGER.info("Setup cloud connection successfully")

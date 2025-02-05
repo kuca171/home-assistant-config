@@ -1,0 +1,46 @@
+sensor:
+  - name: "Teplota"
+    state_topic: "meteo-zahrada/sensors"
+    suggested_display_precision: 1
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device:
+      name: "Meteo-zahrada"
+      identifiers: 
+        - "Meteo-zahrada"
+    unique_id: "Meteo-zahrada-Teplota"
+    device_class: temperature
+  - name: "Vlhkost"
+    state_topic: "meteo-zahrada/sensors"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity }}"
+    device:
+      name: "Meteo-zahrada"
+      identifiers: 
+        - "Meteo-zahrada"
+    unique_id: "Meteo-zahrada-Vlhkost"
+    device_class: humidity
+  - name: "Baterie"
+    state_topic: "meteo-zahrada/sensors"
+    unit_of_measurement: "V"
+    value_template: "{{ value_json.battery_voltage }}"
+    device:
+      name: "Meteo-zahrada"
+      identifiers: 
+        - "Meteo-zahrada"
+    unique_id: "Meteo-zahrada-Baterie"
+    device_class: voltage
+  - name: "wifi"
+    state_topic: "meteo-zahrada/sensors"
+    unit_of_measurement: "dBm"
+    value_template: "{{ value_json.wifi_signal }}"
+    availability:
+      - topic: "meteo-zahrada/availability"
+    payload_available: "online"
+    payload_not_available: "offline"
+    device:
+      name: "Meteo-zahrada"
+      identifiers: 
+        - "Meteo-zahrada"
+    unique_id: "Meteo-zahrada-Wifi"
+    device_class: signal_strength
