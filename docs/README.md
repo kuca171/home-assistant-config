@@ -1,5 +1,5 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/kuca171/home-assistant-config)](https://github.com/kuca171/home-assistant-config/commits/main)
-[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2024.9.2%20-green)](https://github.com/home-assistant/core/releases/tag/2024.9.2)
+[![HA Version](https://img.shields.io/badge/Running%20Home%20Asssistant-2025.1.2%20-green)](https://github.com/home-assistant/core/releases/tag/2025.1.2)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-green)](https://community.home-assistant.io/u/kuca171/summary)
 
 ![alt tag](img/mydashboard.png)
@@ -30,6 +30,8 @@ Pro moji konfiguraci R-pi se toto nasazení přímo Home Assistan OS setkalo s n
 
 ## 2023
 Home Assistant Core, tj. docker verzi bez supervisora provozuji rok a půl bez nejmenších problémů. Od tuya zařízení jsem časem utekl, kde to jen šlo (žárovky flashnuty na esphome, stejně tak i zásuvková lišta). Proběhlo rozšíření R-pi o Home Assistant Sky connect a pořízení Zigbee zařízení (žárovky), připojené do Home Assistant přes Zigbee2MQTT.
+
+## 2025
 
 ## 202X
 Do budoucna plánuji přechod na miniPC a se stěhováním související úpravy sítě (ubiquity) a pořízení nových zařízení (co půjde na zigbee). Příští nasazení proto bude PROXMOX a VM s HassOS.
